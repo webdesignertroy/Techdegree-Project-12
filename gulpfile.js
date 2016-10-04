@@ -25,6 +25,7 @@ gulp.task("concatCSS", function() {
 // concatScripts Function
 gulp.task("concatScripts", function() {
 	return gulp.src([
+		'js/data.js',
 		'js/main.js'
 		])
 		.pipe(concat('app.js'))
