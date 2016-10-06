@@ -8,38 +8,38 @@
 .project-preview {
 	max-width: 550px;
 	margin: 0 auto;
-  position: relative;
+	position: relative;
 }
 .project-preview span {
-  content: url(../img/icons/link-icon-20x20.png);
-  position: absolute;
-  top: calc(50% - 20px);
-  left: calc(50% - 20px);
-  transition: .25s all;
-  transform: rotate(0deg);
+	content: url(../img/icons/link-icon-20x20.png);
+	position: absolute;
+	top: calc(50% - 20px);
+	left: calc(50% - 20px);
+	transition: .25s all;
+	transform: rotate(0deg);
 }
 .project-preview:hover span {
-  transform: rotate(-90deg);
+	transform: rotate(-90deg);
 }
 #projects h3 {
 	text-align: center;
-    text-transform: uppercase;
-    font-size: 0.85rem;
-    position: relative;
+	text-transform: uppercase;
+	font-size: 0.85rem;
+	position: relative;
 }
-#projects p{
+#projects p {
 	text-align: left;
 }
 .project-details-dom {
 	max-width: 960px;
 	margin: 20px auto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
 }
 .project-links {
 	text-align: center;
-}  
+}
 .port-col {
 	display: inline-block;
 	max-width: 550px;
@@ -52,44 +52,45 @@
 	background: rgba(247,153,42, 0.18);
 	border-radius: 5px;
 }
+
 /*  Lightbox  */
 #overlay {
-  position: fixed;
-  display: none;
-  justify-content: center;
-  flex-direction: column;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 100;
-  background: rgba(255, 255, 255, 0.95);
- -webkit-opacity: 0;
- -moz-opacity: 0;
-  opacity: 0;
-  cursor: url(../img/icons/close-icon.png), crosshair;
+	position: fixed;
+	display: none;
+	justify-content: center;
+	flex-direction: column;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+	background: rgba(255, 255, 255, 0.95);
+	-webkit-opacity: 0;
+	-moz-opacity: 0;
+	opacity: 0;
+	cursor: url(../img/icons/close-icon.png), crosshair;
 }
 .show {
 	display: -ms-flexbox !important;
 	display: flex !important;
 }
 #cursor-border-left, #cursor-border-right {
-  position: fixed;
-  display: block;
-  top: 0;
-  bottom: 0;
-  width: 25px;
-  height: 100%;
-  z-index: 101;
-  cursor: default;
+	position: fixed;
+	display: block;
+	top: 0;
+	bottom: 0;
+	width: 25px;
+	height: 100%;
+	z-index: 101;
+	cursor: default;
 }
 #cursor-border-right {
-  right: 0;
+	right: 0;
 }
 #cursor-border-left {
-  left: 0;
+	left: 0;
 }
 .image-details img {
 	max-width: 1050px;
@@ -103,7 +104,7 @@
 #project-details {
 	position: fixed;
 	bottom: 0;
-	left: 0 ;
+	left: 0;
 	width: 100%;
 	height: auto;
 	background: rgba(47, 47, 47, 0.85);
@@ -112,76 +113,100 @@
 	opacity: 0;
 }
 .layout-details .btn-container {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: nowrap;
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	flex-wrap: nowrap;
 }
 .layout-details .btn {
-    display: inline-block;
-    margin: 5px 8px;
-    border: 2px solid #AF5F00;
-    background: #d77705;
-    font-size: .7rem;
-    font-family: 'PT Sans',sans-serif !important;
-    font-weight: 300;
-    padding: 2px 11px 0 11px;
-    border-radius: 7px;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: #f2f2f2;
-    transition: .5s ease-out;
+	display: inline-block;
+	margin: 5px 8px;
+	border: 2px solid #AF5F00;
+	background: #d77705;
+	font-size: .7rem;
+	font-family: 'PT Sans', sans-serif !important;
+	font-weight: 300;
+	padding: 2px 11px 0 11px;
+	border-radius: 7px;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #f2f2f2;
+	transition: .5s ease-out;
 }
 .layout-details .btn:hover {
 	background: #AF5F00;
-  color: #f2f2f2;
+	color: #f2f2f2;
 }
 .layout-details {
 	padding: 20px 5px 10px 5px;
 }
-.layout-details p,
-.layout-details h3 {
+.layout-details p, .layout-details h3 {
 	max-width: 900px;
 	text-align: center;
 	margin: 0 auto;
 }
 .layout-details p {
 	line-height: 1.5em;
-  font-size: 0.85em;
-  padding: 0 5px;
+	font-size: 0.85em;
+	padding: 0 5px;
+	margin-bottom: 10px;
 }
 .layout-details p a {
-  color: #d77705;
-  text-decoration: none;
+	color: #d77705;
+	text-decoration: none;
 }
 .layout-details p a:hover {
-  color: #af5f00;
+	color: #af5f00;
 }
-.layout-details h3 {	
+.layout-details h3 {
 	text-transform: uppercase;
 	letter-spacing: 0.7px;
 	margin-bottom: 7px;
 }
+
 /*  SVG Map  */
 #project-tech {
-    display: flex;
-    opacity: 0;
-    justify-content: center;
-    position: fixed;
-    top: 36px;
-    left: 0;
-    width: 100%;
-    height: auto;
-    z-index: 101;
+	display: flex;
+	opacity: 0;
+	justify-content: center;
+	position: fixed;
+	top: 36px;
+	left: 0;
+	width: 100%;
+	height: auto;
+	z-index: 101;
+}
+.layout-skills {
+	display: flex;
 }
 .badge {
-    display: inline-block;
-    background: url(../img/icons/web-dev-icons.svg);
-    background-size: 133px 69px;
-    width: 30px;
-    height: 32px;
-    margin: 0 5px;
-    text-indent: -9999px;
+	display: inline-block;
+	background: url(../img/icons/web-dev-icons.svg);
+	background-size: 133px 69px;
+	width: 30px;
+	height: 32px;
+	margin: 0 5px;
+	text-indent: -9999px;
+	position: relative;
+	cursor: help;
+}
+.badge-container {
+	position: relative;
+}
+.badge-container span {
+	opacity: 0;
+	position: absolute;
+	top: -20px;
+	left: 16px;
+	padding: 2px 5px 4px 5px;
+	border-radius: 5px;
+	background: rgba(0,0,0,0.8);
+	color: #f2f2f2;
+	z-index: 125;
+	transition: 0.3s ease-out;
+}
+.badge-container:hover span {
+	opacity: 1;
 }
 #html {
 	background-position: -6px 0;
@@ -202,38 +227,25 @@
 	background-position: -36px 68px;
 }
 #wordpress {
-  background-position: -36px 32px;
+	background-position: -36px 32px;
 }
-/*  Lightbox Navigation  */
 
+/*  Lightbox Navigation  */
 #arrow-left {
-  left: 10px;
-  background: url(../img/icons/left-arrow42x63.png);
+	left: 10px;
+	background: url(../img/icons/left-arrow42x63.png);
 }
 #arrow-right {
-  right: 10px;
-  background: url(../img/icons/right-arrow42x63.png);
+	right: 10px;
+	background: url(../img/icons/right-arrow42x63.png);
 }
 #arrow-left, #arrow-right {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  width: 52px;
-  cursor: pointer;
-  z-index: 103;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-/*  Media Queries  */
-@media screen and (min-width: 769px){
-	.port-col {
-		max-width: 300px;
-	}
-}
-
-@media screen and (min-width: 460px){
-	#project-image {
-		margin-top: 0;
-	}
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	width: 52px;
+	cursor: pointer;
+	z-index: 103;
+	background-repeat: no-repeat;
+	background-position: center;
 }

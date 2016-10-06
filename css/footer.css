@@ -7,21 +7,21 @@ footer#footer {
 }
 footer#footer ul {
 	text-align: center;
-    padding: 9px 0 0 0;
-    margin: 0;
+	padding: 9px 0 0 0;
+	margin: 0;
 }
 footer#footer ul li {
 	display: inline-block;
-    padding: 0 6px;
+	padding: 0 6px;
 }
-footer#footer ul li a{
+footer#footer ul li a {
 	display: inline-block;
 	color: inherit;
 	background: url(../img/footer/social-images-a.svg);
-    width: 34px;
-    background-size: 100px 33px;
-    height: 34px;
-    text-indent: -9999px;
+	width: 34px;
+	background-size: 100px 33px;
+	height: 34px;
+	text-indent: -9999px;
 }
 #github a {
 	background-position: 0px 0 !important;

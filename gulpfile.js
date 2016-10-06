@@ -17,7 +17,8 @@ gulp.task("concatCSS", function() {
 		'css/main.css',
 		'css/portfolio.css',
 		'css/skills.css',
-		'css/footer.css'
+		'css/footer.css',
+		'css/mediaqueries.css'
 		])
 		.pipe(concat('style.css'))
 		.pipe(gulp.dest('css'));

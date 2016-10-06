@@ -202,7 +202,8 @@ var skillLevel = {
 
 
 $(document).ready(function(){
-
+	/* Note projects object is defined in data.js file */
+	
 	/************************
 		VARIABLES
 	*************************/
@@ -217,8 +218,6 @@ $(document).ready(function(){
 	var mq = window.matchMedia('all and (max-width: 769px)');
 	var menuLength = 0;
 
-	var $portfolio = $(".project-details-dom");
-
 	var $overlay = $("#overlay");
 	var $projectImage = $('<div id="project-image"></div>');
 	var $projectDetails = $('<div id="project-details"></div>');
@@ -228,10 +227,8 @@ $(document).ready(function(){
 	var $arrowLeft = $('<div id="arrow-left"></div>');
 	var $arrowRight = $('<div id="arrow-right"></div>');
 
-	var $skills = $('.skill');
-
 	/************************
-		FUNCTION EXPRESSION
+		FUNCTION EXPRESSIONS
 	*************************/
 
 	// Function: hide menu items
@@ -256,7 +253,7 @@ $(document).ready(function(){
 		} 
 	}; // end scroll function
 	
-	// Find correct data in project details array
+	// Funcion: Find correct data in project details array
 		var findData = function(index) {
 			var imageHTML = "";
 			var detailHTML = "";
@@ -266,12 +263,12 @@ $(document).ready(function(){
 					// build image div
 					imageHTML += '<div class="image-details" data-image-index="'+ i +'">';
 					imageHTML += '<img src="img/projects/' + data.preview + '.jpg"/>';
-					imageHTML += '</div>'
+					imageHTML += '</div>';
 
 					// build description div
 					detailHTML += '<div class="layout-details">';
 					detailHTML += '<h3>' + data.name +'</h3>';
-					detailHTML +=  '<p class="btn-container">'
+					detailHTML +=  '<p class="btn-container">';
 					detailHTML += '<a href="' + data.url + '" class="btn" target="_blank">Visit Site</a>';
 					if ( data.github !== "" ) {
 						detailHTML += '<a href="' + data.github + '" class="btn" target="_blank"> Visit GitHub</a>';
@@ -283,18 +280,18 @@ $(document).ready(function(){
 					// build skills badges div
 					skillsHTML += '<div class="layout-skills">';
 					for ( i = 0; i < data.tech.length; i++ ) {
-						skillsHTML += '<div id="' + data.tech[i] + '" class="badge">';
+						skillsHTML += '<div class="badge-container"><div id="' + data.tech[i] + '" class="badge">';
 						skillsHTML += data.tech[i];
-						skillsHTML += '</div>';
+						skillsHTML += '</div><span>' + data.tech[i] + '</span></div>';
 					}
-					skillsHTML += '</div>'
+					skillsHTML += '</div>';
 				}
 				document.getElementById("project-tech").innerHTML = skillsHTML;
 				document.getElementById("project-image").innerHTML = imageHTML;
 				document.getElementById("project-details").innerHTML = detailHTML;
 
-			}); // end Find correct data
-		};  // end findData function
+			}); // end HTML builds
+		};  // end find data function 
 
  	/************************
 	   NAVIGATION
@@ -306,7 +303,7 @@ $(document).ready(function(){
  		// prevent normal action
  		e.preventDefault();
 
- 		// defines the href of the'targeted id' I'm looking for
+ 		// defines the href of the'targeted id' 
  		var $link = $(this).attr("href");
  		$scroll($link, 0);
 
@@ -315,10 +312,10 @@ $(document).ready(function(){
 			hideMenu();
 		}
 
-		// invokes $scroll()
+		// invokes scroll function --> $scroll()
  	 	$scroll($link, menuLength);
 
- 	}); // end  menu item click
+ 	}); // end menu item click
 
  	// On #back-top click, scroll to 'targeted id'
  	 $backTop.on("click", function(e){
@@ -326,7 +323,7 @@ $(document).ready(function(){
  	 	// prevent normal action
  	 	e.preventDefault();
 
- 	 	// defines the href of the 'targeted id' I'm looking for
+ 	 	// defines the href of the 'targeted id' 
  	 	var $link = $(this).attr("href");
 
 		// invokes hideMenu()
@@ -334,7 +331,7 @@ $(document).ready(function(){
 			hideMenu();
 		}
 
-		// invokes $scroll()
+		// invokes scroll function --> $scroll()
  	 	$scroll($link, menuLength);
 
  	 }); // end #back-top click
@@ -348,8 +345,6 @@ $(document).ready(function(){
 		$menuReveal.hide();
 		menuLength = 0;
 	} // end hide/show menus when appropriate
-
-	// small logo loads to sticky menu
 
  	/************************
 	   EVENT LISTENERS
@@ -377,7 +372,7 @@ $(document).ready(function(){
 			$navBar.show();
 			menuLength = 0;
 		}
-	});
+	}); // end mq.addListner 
 
 	// Listen for scroll pass 440px then fix main navigation
 	if( $(window).height() !== $(document).height() ) {
@@ -409,7 +404,6 @@ $(document).ready(function(){
 		 	}
 		});
 	} // end scroll pass 100px
-
 
  	/************************
 	   HEADER INTERACTIVE 
@@ -460,7 +454,7 @@ $(document).ready(function(){
 	// Open overlay on click
 	$(".project-details-dom").on("click", ".port-col", function(){
 
-		// variables
+		// Variables
 		var $projectIndex = parseInt($(this).attr("data-index")); 
 
 		// Append overlay/wrapper and show
@@ -523,7 +517,7 @@ $(document).ready(function(){
 
 	/*  Arrow Navigation  */
 
-	// On right arrow click (bubbling event issues)
+	// On right-arrow click event (bubbling event issues)
 	$wrapper.on("click", "#arrow-right", function(){
 		var detailsIndex = parseInt($(".image-details").attr("data-image-index"));
 		if ( detailsIndex < projects.length - 1 ) {
@@ -531,9 +525,9 @@ $(document).ready(function(){
 		} else {
 			findData(0);
 		}
-	});
+	}); // end right-arrow click event
 
-	// On left arrow click (bubbling event issues)
+	// On left arrow click event (bubbling event issues)
 	$wrapper.on("click", "#arrow-left", function(){
 		var detailsIndex = parseInt($(".image-details").attr("data-image-index"));
 		if ( detailsIndex > 0 ) {
@@ -541,10 +535,9 @@ $(document).ready(function(){
 		} else {
 			findData(projects.length - 1);
 		}
-	});
+	}); // end left-arrow click event
 
 	/*  Accessibility: Keyboard  */
-
 	$(this).keyup(function(e){
 		"use strict";
 		switch(e.keyCode) {
@@ -561,12 +554,13 @@ $(document).ready(function(){
 				$("#arrow-right").trigger("click");
 			break;
 		}
-	});
+	}); // end Accessibility: Keyboard
 
  	/*******************************
 	   SKILL DOUGHNUT GRAPHS
 	*******************************/
-
+	/* Note: skillLevel object is defined in data.js file  */
+	
 	// Invoke HTML
 		skillLevel.html();
 

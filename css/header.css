@@ -3,36 +3,36 @@
 /* Animation for revealing left-side image */
 @keyframes reveal-leftside {
 	from {
-		width: 0;
+	 width: 0;
 	}
-	to {
-		width: 400px;
+	 to {
+	 width: 400px;
 	}
 }
 @keyframes unreveal-leftside {
 	from {
-		width: 400px;
+	 width: 400px;
 	}
-	to {
-		width: 0;
+	 to {
+	 width: 0;
 	}
 }
 
 /* Animation for revealing right-side image */
 @keyframes reveal-rightside {
 	from {
-		width: 0;
+	 width: 0;
 	}
-	to {
-		width: 400px;
+	 to {
+	 width: 400px;
 	}
 }
 @keyframes unreveal-rightside {
 	from {
-		width: 400px;
+	 width: 400px;
 	}
-	to {
-		width: 0;
+	 to {
+	 width: 0;
 	}
 }
 
@@ -57,8 +57,7 @@
 #header:hover h1 {
 	color: #d77705;
 }
-.logo-image,
-.logo-image-mobile {
+.logo-image, .logo-image-mobile {
 	position: relative;
 	margin: 0 auto;
 	width: 400px;
@@ -85,18 +84,13 @@
 	height: 319px;
 	margin-left: 5px;
 }
-#base, 
-#base-mobile {
+#base, #base-mobile {
 	z-index: 1;
 	width: 100%;
 	padding-left: 5px;
 	padding-right: 5px;
 }
-
-#left,
-#right,
-#base,
-#base-mobile {
+#left, #right, #base, #base-mobile {
 	position: absolute;
 	margin: 0 auto;
 	height: 319px;
@@ -114,9 +108,8 @@
 .trigger-container {
 	display: none;
 }
-
 /* Animation Behavior for left-side image*/
-.reveal-left{
+.reveal-left {
 	animation-name: reveal-leftside;
 	animation-duration: 1.2s;
 	animation-delay: 0.15s;
@@ -129,7 +122,6 @@
 	animation-timing-function: ease-in-out;
 	animation-fill-mode: both;
 }
-
 /* Animation Behavior for right-side image*/
 .reveal-right {
 	animation-name: reveal-rightside;
@@ -149,84 +141,4 @@
 }
 .logo-image {
 	display: none;
-}
-
-/*  Media Query  */
-
-@media screen and (min-width: 430px) and (max-width: 769px){
-	.logo-image-mobile {
-		width: 400px;
-	}
-	#base,
-	#base-mobile {
-		width: 400px;
-	}
-	#header {
-		height: 425px;
-	}
-	.logo-image img,
-	.logo-image-mobile img {
-		width: auto;
-	}
-}
-@media screen and (min-width: 769px) {
-	#header {
-		background: #f3f3f3;
-	}
-}
-@media screen and (min-width: 769px) {
-
-	.logo-image img,
-	.logo-image-mobile img {
-		width: auto;
-	}
-	#header {
-		height: 425px;
-	}
-	.logo-image-mobile {
-		display: none;
-	}
-	.logo-image {
-		display: block;
-	}
-	#left-trigger,
-	#right-trigger {
-		position: absolute;
-		width: 49.5%;
-		top: 30px;
-		height: 319px;
-		cursor: pointer;
-		z-index: 10;
-	}
-	#left-trigger {
-		left: 0;
-	}
-	#right-trigger {
-		right: 0;
-	}
-	.trigger-container {
-		display: flex;
-		justify-content: center;
-	}
-	#left-button {
-		padding: 50px 18px;
-	}
-	#right-button {
-		padding: 50px 27px;
-	}
-	.ghost {
-	    text-shadow: 1px 1px 3px rgba(255,255,255,0.8);
-	    align-self: center;
-	    background: rgba(255,255, 255, 0.9);
-	    font-size: 1.2em;
-	    color: #864900;
-	    border: 3px solid #ececec;
-	    border-radius: 50%;
-	    transition: 0.5s ease-out;
-	    text-transform: uppercase;
-	    letter-spacing: 0.7px;
-	}
-	.trigger-container:hover .ghost{
-		color: #d77705;
-	}
 }
