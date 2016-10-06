@@ -16,11 +16,15 @@
 	font-size: 1.2em;
 	letter-spacing: 1px;
 	text-transform: uppercase;
+	-webkit-opacity: 0;
+	-moz-opacity: 0;
 	opacity: 0;
 	transition: .5s all ease-in-out;
 	transform: translateX(-20px);
 }
 .show-logo {
+	-webkit-opacity: 1 !important;
+	-moz-opacity: 1 !important;
 	opacity: 1 !important;
 	transform: translateX(0) !important;
 }

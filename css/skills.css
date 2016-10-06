@@ -1,6 +1,7 @@
 /*  Skills Style  */
 
 #skill-details {
+	display: -ms-flexbox;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;

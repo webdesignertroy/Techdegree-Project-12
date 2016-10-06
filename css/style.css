@@ -604,11 +604,15 @@ img {
 	font-size: 1.2em;
 	letter-spacing: 1px;
 	text-transform: uppercase;
+	-webkit-opacity: 0;
+	-moz-opacity: 0;
 	opacity: 0;
 	transition: .5s all ease-in-out;
 	transform: translateX(-20px);
 }
 .show-logo {
+	-webkit-opacity: 1 !important;
+	-moz-opacity: 1 !important;
 	opacity: 1 !important;
 	transform: translateX(0) !important;
 }
@@ -778,6 +782,7 @@ img {
 .project-details-dom {
 	max-width: 960px;
 	margin: 20px auto;
+	display: -ms-flexbox;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -842,6 +847,7 @@ img {
 	margin: 0 auto;
 }
 #project-image {
+	display: -ms-flexbox;
 	display: flex;
 	justify-content: center;
 	margin-top: -176px;
@@ -855,9 +861,12 @@ img {
 	background: rgba(47, 47, 47, 0.85);
 	z-index: 102;
 	color: #f2f2f2;
+	-webkit-opacity: 0;
+	-moz-opacity: 0;
 	opacity: 0;
 }
 .layout-details .btn-container {
+	display: -ms-flexbox;
 	display: flex;
 	justify-content: center;
 	flex-direction: row;
@@ -911,7 +920,10 @@ img {
 
 /*  SVG Map  */
 #project-tech {
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-opacity: 0;
+	-moz-opacity: 0;
 	opacity: 0;
 	justify-content: center;
 	position: fixed;
@@ -922,6 +934,7 @@ img {
 	z-index: 101;
 }
 .layout-skills {
+	display: -ms-flexbox;
 	display: flex;
 }
 .badge {
@@ -939,6 +952,8 @@ img {
 	position: relative;
 }
 .badge-container span {
+	-webkit-opacity: 0;
+	-moz-opacity: 0;
 	opacity: 0;
 	position: absolute;
 	top: -20px;
@@ -951,6 +966,8 @@ img {
 	transition: 0.3s ease-out;
 }
 .badge-container:hover span {
+	-webkit-opacity: 1;
+	-moz-opacity: 1;
 	opacity: 1;
 }
 #html {
@@ -998,6 +1015,7 @@ img {
 /*  Skills Style  */
 
 #skill-details {
+	display: -ms-flexbox;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -1085,6 +1103,8 @@ footer#footer ul li a {
 		border-radius: 50%;
 		text-align: center;
 		transition: 1s;
+		-webkit-opacity: 0;
+		-moz-opacity: 0;
 		opacity: 0;
 	}
 	#back-top a {
@@ -1097,6 +1117,8 @@ footer#footer ul li a {
 		text-decoration: none;
 	}
 	.fade-in {
+		-webkit-opacity: 1 !important;
+		-moz-opacity: 1 !important;
 		opacity: 1 !important;
 	}
 	/*  Header Style  */
@@ -1130,6 +1152,7 @@ footer#footer ul li a {
 		right: 0;
 	}
 	.trigger-container {
+		display: -ms-flexbox;
 		display: flex;
 		justify-content: center;
 	}
