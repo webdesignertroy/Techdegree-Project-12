@@ -226,6 +226,7 @@ $(document).ready(function(){
 	var $cursorBorderRight = $('<div id="cursor-border-right"></div>');
 	var $arrowLeft = $('<div id="arrow-left"></div>');
 	var $arrowRight = $('<div id="arrow-right"></div>');
+	var $mobileEscape = $('<div id="mobile-escape">(X)Tap Screen Center</div>');
 
 	/************************
 		FUNCTION EXPRESSIONS
@@ -438,13 +439,13 @@ $(document).ready(function(){
 	*******************************/
 
 	// Create "for loop" with HTML code mixed with variables 
-	function renderProjectDetails(e) {
-		for ( var t="",  i=0; i < projects.length; i++ ) 
-			t+='<div class="port-col" data-index="' + i + '">',
-			t+="<h3>"+projects[i].name+"</h3>",
-			t+='<div class="project-preview"><img src="img/projects/thumbs/'+projects[i].preview+'.png" alt=""><span></span></div>',
+	function renderProjectDetails() {
+		for ( var t="",  i=0; i < projects.length; i++ ) {
+			t+='<div class="port-col" data-index="' + i + '">';
+			t+="<h3>"+projects[i].name+"</h3>";
+			t+='<div class="project-preview"><img src="img/projects/thumbs/'+projects[i].preview+'.png" alt=""><span></span></div>';
 			t+="</div>";
-
+		}
 		$(".project-details-dom").html(t);
 	}
 
@@ -466,6 +467,7 @@ $(document).ready(function(){
 		$cursorBorderRight.appendTo($wrapper);
 		$arrowRight.appendTo($wrapper);
 		$arrowLeft.appendTo($wrapper);
+		$mobileEscape.appendTo($wrapper);
 
 		// Invoke findData() to Find Correct Data
 		findData($projectIndex);
@@ -511,6 +513,7 @@ $(document).ready(function(){
 			$cursorBorderLeft.remove();
 			$arrowRight.remove();
 			$arrowLeft.remove();
+			$mobileEscape.remove();
 		});
 
 	});  //end Close overlay on click

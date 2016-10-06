@@ -135,6 +135,9 @@
 	#sm-logo {
 		color: #d77705;
 	}
+	#mobile-escape {
+		display: none;
+	}
 }
 
 @media screen and (min-width: 460px) {  /*  Mobile View  */
