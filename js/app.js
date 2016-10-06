@@ -226,7 +226,7 @@ $(document).ready(function(){
 	var $cursorBorderRight = $('<div id="cursor-border-right"></div>');
 	var $arrowLeft = $('<div id="arrow-left"></div>');
 	var $arrowRight = $('<div id="arrow-right"></div>');
-	var $mobileEscape = $('<div id="mobile-escape">(X)Tap Screen Center</div>');
+	var $mobileEscape = $('<div id="esc-container"><div id="mobile-escape">Click to Close<span>x</span></div></div>');
 
 	/************************
 		FUNCTION EXPRESSIONS
@@ -517,9 +517,14 @@ $(document).ready(function(){
 		});
 
 	});  //end Close overlay on click
-
-	/*  Arrow Navigation  */
-
+	
+	/*  Arrow Navigation and #mobile-escape  */
+	
+	// On mobile-escape click (bubbling event issues)
+	$wrapper.on("click","#mobile-escape", function(){
+		$overlay.trigger("click");
+	});
+	
 	// On right-arrow click event (bubbling event issues)
 	$wrapper.on("click", "#arrow-right", function(){
 		var detailsIndex = parseInt($(".image-details").attr("data-image-index"));
