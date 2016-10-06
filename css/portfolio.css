@@ -191,8 +191,8 @@
 .badge {
 	display: inline-block;
 	background: url(../img/icons/web-dev-icons.svg);
-	background-size: 133px 69px;
-	width: 30px;
+	background-size: 133px 67px;
+	width: 29px;
 	height: 32px;
 	margin: 0 5px;
 	text-indent: -9999px;
@@ -222,25 +222,25 @@
 	opacity: 1;
 }
 #html {
-	background-position: -6px 0;
+	background-position: -8px 0;
 }
 #css {
-	background-position: -6px 32px;
+	background-position: -9px 32px;
 }
 #github {
-	background-position: -66px 32px;
+	background-position: -67px 32px;
 }
 #js {
-	background-position: -98px 0;
+	background-position: -96px 0;
 }
 #jquery {
 	background-position: -67px 0;
 }
 #sass {
-	background-position: -36px 68px;
+	background-position: -37px 67px;
 }
 #wordpress {
-	background-position: -36px 32px;
+	background-position: -38px 32px;
 }
 
 /*  Lightbox Navigation  */

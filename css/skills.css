@@ -17,9 +17,45 @@
 }
 .skill .label {
 	position: absolute;
-	top: 58px;
+	top: 78px;
 	left: 0;
 	width: 100%;
 	text-align: center;
 	color: #9c9c9c;
+}
+.skill .label span {
+	display: inline-block;
+	position: absolute;
+	top: -36px;
+	left: 68px;
+	background: url(../img/icons/web-dev-icons.svg);
+	background-size: 133px 67px;
+	width: 29px;
+	height: 32px;
+	margin: 0 5px;
+	text-indent: -9999px;
+}
+#htmlc {
+	background-position: -8px 0;
+}
+#cssc {
+	background-position: -8px 32px;
+}
+#github2c {
+	background-position: -66px 32px;
+}
+#jsc {
+	background-position: -96px 0;
+}
+#jqueryc {
+	background-position: -67px 0;
+}
+#sassc {
+	background-position: -37px 67px;
+}
+#wordpressc {
+	background-position: -38px 32px;
+}
+#gulpc {
+	background-position: -97px 32px;
 }

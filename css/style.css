@@ -940,8 +940,8 @@ img {
 .badge {
 	display: inline-block;
 	background: url(../img/icons/web-dev-icons.svg);
-	background-size: 133px 69px;
-	width: 30px;
+	background-size: 133px 67px;
+	width: 29px;
 	height: 32px;
 	margin: 0 5px;
 	text-indent: -9999px;
@@ -971,25 +971,25 @@ img {
 	opacity: 1;
 }
 #html {
-	background-position: -6px 0;
+	background-position: -8px 0;
 }
 #css {
-	background-position: -6px 32px;
+	background-position: -9px 32px;
 }
 #github {
-	background-position: -66px 32px;
+	background-position: -67px 32px;
 }
 #js {
-	background-position: -98px 0;
+	background-position: -96px 0;
 }
 #jquery {
 	background-position: -67px 0;
 }
 #sass {
-	background-position: -36px 68px;
+	background-position: -37px 67px;
 }
 #wordpress {
-	background-position: -36px 32px;
+	background-position: -38px 32px;
 }
 
 /*  Lightbox Navigation  */
@@ -1031,11 +1031,47 @@ img {
 }
 .skill .label {
 	position: absolute;
-	top: 58px;
+	top: 78px;
 	left: 0;
 	width: 100%;
 	text-align: center;
 	color: #9c9c9c;
+}
+.skill .label span {
+	display: inline-block;
+	position: absolute;
+	top: -36px;
+	left: 68px;
+	background: url(../img/icons/web-dev-icons.svg);
+	background-size: 133px 67px;
+	width: 29px;
+	height: 32px;
+	margin: 0 5px;
+	text-indent: -9999px;
+}
+#htmlc {
+	background-position: -8px 0;
+}
+#cssc {
+	background-position: -8px 32px;
+}
+#github2c {
+	background-position: -66px 32px;
+}
+#jsc {
+	background-position: -96px 0;
+}
+#jqueryc {
+	background-position: -67px 0;
+}
+#sassc {
+	background-position: -37px 67px;
+}
+#wordpressc {
+	background-position: -38px 32px;
+}
+#gulpc {
+	background-position: -97px 32px;
 }
 
 /* Footer Style */
