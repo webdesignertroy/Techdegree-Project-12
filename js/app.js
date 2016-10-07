@@ -246,7 +246,7 @@ $(document).ready(function(){
 
 	// Function: scrolls to 'targeted id' on page
 	var $scroll = function($hash, menuCount) {
-		if( $(this).scrollTop() < 424 && $hash === "#projects" && menuCount !== 0) {
+		if( $(this).scrollTop() < 424  && menuCount !== 0) {  // Clicking link before window is 424px is treated differently
 			$('html, body').animate({
 				scrollTop: $( $hash ).offset().top -  menuCount - 245
 			}, 500, "swing");		} else {
@@ -603,7 +603,7 @@ $(document).ready(function(){
 	// When the 1st skills doughnut chart scrolls into view,
 	//    start the animation
 	$(window).scroll(function() {
-		if( isScrolledIntoView("#html") && inView === false) {
+		if( isScrolledIntoView("#html") && inView === false ) {
 			 inView = true;
 			// Invoke HTML
 				skillLevel.html();
