@@ -24,6 +24,8 @@ $(document).ready(function(){
 	var $arrowLeft = $('<div id="arrow-left"></div>');
 	var $arrowRight = $('<div id="arrow-right"></div>');
 	var $mobileEscape = $('<div id="esc-container"><div id="mobile-escape">Close<span>x</span></div></div>');
+	
+	var inView = false;
 
 	/************************
 		FUNCTION EXPRESSIONS
@@ -65,7 +67,16 @@ $(document).ready(function(){
 			
 		};
 		
-	
+	// Function: Listen for when an element (elem) scrolls into view on the screen
+		var isScrolledIntoView = function(elem) { 
+			var docViewTop = $(window).scrollTop();
+			var docViewBottom = docViewTop + $(window).height();
+			
+			var elemTop = $(elem).offset().top;
+			var elemBottom = elemTop + $(elem).height();
+			return ((elemTop <= docViewBottom) && (elemBottom >= docViewTop));
+		}; 	
+		
 	// Function: Find correct data in project details array
 		var findData = function(index) {
 			var imageHTML = "";
@@ -385,28 +396,36 @@ $(document).ready(function(){
 	   SKILL DOUGHNUT GRAPHS
 	*******************************/
 	/* Note: skillLevel object is defined in data.js file  */
+
+	// When the 1st skills doughnut chart scrolls into view,
+	//    start the animation
+	$(window).scroll(function() {
+		if( isScrolledIntoView("#html") && inView === false) {
+			 inView = true;
+			// Invoke HTML
+				skillLevel.html();
+		
+			// Invoke CSS
+				skillLevel.css();
+		
+			// Invoke JavaScript
+				skillLevel.js();
+		
+			// Invoke jQuery
+				skillLevel.jquery();
+		
+			// Invoke WordPress
+				skillLevel.wordpress();
+		
+			// Invoke Sass
+				skillLevel.sass();
+		
+			// Invoke Gulp
+				skillLevel.gulp();
+		
+			// Invoke GitHub
+				skillLevel.github();
+		}
+	}); // end Animate charts when they scroll into view
 	
-	// Invoke HTML
-		skillLevel.html();
-
-	// Invoke CSS
-		skillLevel.css();
-
-	// Invoke JavaScript
-		skillLevel.js();
-
-	// Invoke jQuery
-		skillLevel.jquery();
-
-	// Invoke WordPress
-		skillLevel.wordpress();
-
-	// Invoke Sass
-		skillLevel.sass();
-
-	// Invoke Gulp
-		skillLevel.gulp();
-
-	// Invoke GitHub
-		skillLevel.github();
-});
+}); // end main.js

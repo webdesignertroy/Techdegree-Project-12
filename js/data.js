@@ -61,12 +61,13 @@ var skillLevel = {
 			},
 			{
 				value: 25,
-				color: "#eeeeee"
+				color: "#eeeeee" 
 			} 
 		]; 
+		
+				var canvas = document.querySelector("#html");
+				skillLevel.drawDoughnutChart(level, canvas);
 
-		var canvas = document.querySelector("#html");
-		skillLevel.drawDoughnutChart(level, canvas);
 	},
 	// CSS
 	css: function() {
@@ -196,7 +197,6 @@ var skillLevel = {
 	}
 
 }; // end HTML5Level
-
-
+	
 
 
