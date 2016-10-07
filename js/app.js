@@ -226,7 +226,7 @@ $(document).ready(function(){
 	var $cursorBorderRight = $('<div id="cursor-border-right"></div>');
 	var $arrowLeft = $('<div id="arrow-left"></div>');
 	var $arrowRight = $('<div id="arrow-right"></div>');
-	var $mobileEscape = $('<div id="esc-container"><div id="mobile-escape">Click to Close<span>x</span></div></div>');
+	var $mobileEscape = $('<div id="esc-container"><div id="mobile-escape">Close<span>x</span></div></div>');
 
 	/************************
 		FUNCTION EXPRESSIONS

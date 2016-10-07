@@ -922,16 +922,16 @@ img {
 #project-tech {
 	display: -ms-flexbox;
 	display: flex;
+	justify-content: flex-start;
 	-webkit-opacity: 0;
 	-moz-opacity: 0;
 	opacity: 0;
-	justify-content: center;
 	position: fixed;
-	top: 60px;
-	left: 0;
-	width: 100%;
+	top: 40px;
+	left: 65px;
+	width: 50%;
 	height: auto;
-	z-index: 101;
+	z-index: 103;
 }
 .layout-skills {
 	display: -ms-flexbox;
@@ -1014,16 +1014,16 @@ img {
 #mobile-escape {
 	position: fixed;
 	text-align: center;
-	top: 10px;
-	right: 0;
-	left: 0;
+	top: 8px;
+	right: 66px;
 	height: 18px;
 	text-transform: uppercase;
 	font-size: 0.65em;
 	font-weight: bold;
 	z-index: 101;
-	width: 100px;
+	width: 53px;
 	margin: 0 auto;
+	cursor: pointer;
 }
 #esc-container {
 	position: relative;
@@ -1034,7 +1034,7 @@ img {
 	font-size: 0.5em;
 	color: #f2f2f2;
 	top: -3px;
-	left: -5px;
+	left: -7px;
 	background: rgba(0,0,0,0.8);
 	-webkit-border-radius: 100%;
 	-moz-border-radius: 100%;
@@ -1143,7 +1143,18 @@ footer#footer ul li a {
 
 /*  Media Queries */
 
-@media screen and (min-width: 430px) and (max-width: 769px) { /*  Tablet View - exclusive  */
+@media screen and (min-width: 460px) {  /*  Tablet View  */
+	/*  Portfolio Style  */
+	#project-image {
+		margin-top: 0;
+	}
+	#mobile-escape,
+	#project-tech {
+		top: 26px;
+	}
+}
+
+@media screen and (min-width: 430px) and (max-width: 769px) { /*  Desktop View - exclusive  */
 	/*  Header Style  */
 	.logo-image-mobile {
 		width: 400px;
@@ -1159,7 +1170,7 @@ footer#footer ul li a {
 	}
 }
 
-@media screen and (min-width: 769px) {  /*  Tablet View  */
+@media screen and (min-width: 769px) {  /*  Desktop View  */
 	/*  Basic Elements  */
 	#back-top {
 		display: block;
@@ -1248,6 +1259,10 @@ footer#footer ul li a {
 	.port-col {
 		max-width: 300px;
 	}
+	#project-tech {
+		justify-content: center;
+		width: 100%;
+	}
 	/*  Main Navigation Style  */
 	#nav {
 		padding-top: 1em;
@@ -1282,9 +1297,4 @@ footer#footer ul li a {
 	}
 }
 
-@media screen and (min-width: 460px) {  /*  Mobile View  */
-	/*  Portfolio Style  */
-	#project-image {
-		margin-top: 0;
-	}
-}
+
