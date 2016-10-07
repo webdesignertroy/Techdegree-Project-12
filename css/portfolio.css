@@ -102,6 +102,7 @@
 	display: flex;
 	justify-content: center;
 	margin-top: -176px;
+	transition: .3s ease-out;
 }
 #project-details {
 	position: fixed;
@@ -115,6 +116,7 @@
 	-webkit-opacity: 0;
 	-moz-opacity: 0;
 	opacity: 0;
+	transition: .3s ease-out;
 }
 .layout-details .btn-container {
 	display: -ms-flexbox;
@@ -183,6 +185,7 @@
 	width: 50%;
 	height: auto;
 	z-index: 103;
+	transition: .3s ease-out;
 }
 .layout-skills {
 	display: -ms-flexbox;
@@ -293,4 +296,7 @@
 	border: 1px solid rgba(49,49,49,0.5);
 	padding: 3px 5px 3px 5px;
 	z-index: 105;
+}
+.transparent {
+	opacity: 0 !important;
 }

@@ -254,7 +254,22 @@ $(document).ready(function(){
 		} 
 	}; // end scroll function
 	
-	// Funcion: Find correct data in project details array
+	// Function: Hide #project-image
+		var newView = function(direct) {
+			$projectTech.addClass("transparent");
+			$projectDetails.addClass("transparent");
+			$projectImage.addClass("transparent").delay(500).queue(function(next){
+				findData(direct);
+				$projectImage.removeClass("transparent");
+				$projectTech.removeClass("transparent");
+				$projectDetails.removeClass("transparent");
+				next();
+			});
+			
+		};
+		
+	
+	// Function: Find correct data in project details array
 		var findData = function(index) {
 			var imageHTML = "";
 			var detailHTML = "";
@@ -529,9 +544,12 @@ $(document).ready(function(){
 	$wrapper.on("click", "#arrow-right", function(){
 		var detailsIndex = parseInt($(".image-details").attr("data-image-index"));
 		if ( detailsIndex < projects.length - 1 ) {
-			findData(detailsIndex +1);
+			var directions = detailsIndex + 1;
+			newView(directions);
+			
 		} else {
-			findData(0);
+			var directions = 0;
+			newView(directions);
 		}
 	}); // end right-arrow click event
 
@@ -539,9 +557,11 @@ $(document).ready(function(){
 	$wrapper.on("click", "#arrow-left", function(){
 		var detailsIndex = parseInt($(".image-details").attr("data-image-index"));
 		if ( detailsIndex > 0 ) {
-			findData(detailsIndex - 1);
+			var directions = detailsIndex - 1;
+			newView(directions);
 		} else {
-			findData(projects.length - 1);
+			var directions = projects.length - 1;
+			newView(directions);
 		}
 	}); // end left-arrow click event
 
