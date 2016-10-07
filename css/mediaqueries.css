@@ -120,6 +120,7 @@
 	#project-tech {
 		justify-content: center;
 		width: 100%;
+		left: 0;
 	}
 	/*  Main Navigation Style  */
 	#nav {
