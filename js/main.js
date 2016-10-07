@@ -56,12 +56,12 @@ $(document).ready(function(){
 	// Function: Hide #project-image
 		var newView = function(direct) {
 			$projectTech.addClass("transparent");
-			$projectDetails.addClass("transparent");
+			$(".layout-details").addClass("transparent");
 			$projectImage.addClass("transparent").delay(500).queue(function(next){
 				findData(direct);
 				$projectImage.removeClass("transparent");
 				$projectTech.removeClass("transparent");
-				$projectDetails.removeClass("transparent");
+				$(".layout-details").removeClass("transparent");
 				next();
 			});
 			
