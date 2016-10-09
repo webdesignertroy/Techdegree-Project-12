@@ -229,6 +229,8 @@ $(document).ready(function(){
 	var $mobileEscape = $('<div id="esc-container"><div id="mobile-escape">Close<span>x</span></div></div>');
 	
 	var inView = false;
+	
+	var preLoadTime = 0;
 
 	/************************
 		FUNCTION EXPRESSIONS
@@ -319,7 +321,18 @@ $(document).ready(function(){
 
 			}); // end HTML builds
 		};  // end find data function 
-
+		
+	/************************
+		FUNCTION DECLARATIONS
+	*************************/	
+	// Function: Don't start interactive backgrounds automatically
+	var preLoadTimer = setInterval(startEvent, 600);
+	
+	function startEvent() {
+		preLoadTime = 1;
+		clearInterval(preLoadTimer);
+	}
+	
  	/************************
 	   NAVIGATION
 	*************************/	
@@ -443,27 +456,32 @@ $(document).ready(function(){
 		  $("#logo").removeClass("hide-svg");
 		  $("#svg-alternative").addClass("hide-img");
     }  
+	// Load after logo animation has run more than 75%
 	
 	// On left-hemisphere hover in header / Develop-side
 	$("#left-trigger").mouseenter(function(){
+		if(preLoadTime !== 1) { return;}
 		$("#develop-bg").removeClass("reveal-left");
 		$("#header").addClass("red");
 	});
 	$("#left-trigger").mouseleave(function(){
+		if(preLoadTime !== 1) { return;}
 		$("#develop-bg").addClass("reveal-left");
 		$("#header").removeClass("red");
 	});
 
 	// On right-hemisphere hover in header / Create-side
 	$("#right-trigger").mouseenter(function(){
+		if(preLoadTime !== 1) { return;}
 		$("#create-bg").removeClass("reveal-right");
 		$("#header").addClass("blue");
 	});
 	$("#right-trigger").mouseleave(function(){
+		if(preLoadTime !== 1) { return;}
 		$("#create-bg").addClass("reveal-right");
 		$("#header").removeClass("blue");
 	});
-
+		
  	/*******************************
 	   FOR PORTFOLIO INTERACTIVE
 	*******************************/
