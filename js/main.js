@@ -232,33 +232,33 @@ $(document).ready(function(){
  	/************************
 	   HEADER INTERACTIVE 
 	*************************/		
-
-	// On left-hemisphere hover in header
+	// Detect Browser if I.E. is being used
+	  if ( !!navigator.userAgent.match(/Trident\/7\./) || /Edge/.test(navigator.userAgent)  ) {
+		  $("#svg-alternative").removeClass("hide-img");
+		  $("#logo").addClass("hide-svg");
+    } else {
+		  $("#logo").removeClass("hide-svg");
+		  $("#svg-alternative").addClass("hide-img");
+    }  
+	
+	// On left-hemisphere hover in header / Develop-side
 	$("#left-trigger").mouseenter(function(){
-		$("#left").addClass("reveal-left");
-		$("#left").removeClass("hide-left");
+		$("#develop-bg").removeClass("reveal-left");
 		$("#header").addClass("red");
-		$("#header").removeClass("init");
 	});
 	$("#left-trigger").mouseleave(function(){
-		$("#left").removeClass("reveal-left");
-		$("#left").addClass("hide-left");
+		$("#develop-bg").addClass("reveal-left");
 		$("#header").removeClass("red");
-		$("#header").addClass("init");
 	});
 
-	// On right-hemisphere hover in header
+	// On right-hemisphere hover in header / Create-side
 	$("#right-trigger").mouseenter(function(){
-		$("#right").addClass("reveal-right");
-		$("#right").removeClass("hide-right");
+		$("#create-bg").removeClass("reveal-right");
 		$("#header").addClass("blue");
-		$("#header").removeClass("init");
 	});
 	$("#right-trigger").mouseleave(function(){
-		$("#right").removeClass("reveal-right");
-		$("#right").addClass("hide-right");
+		$("#create-bg").addClass("reveal-right");
 		$("#header").removeClass("blue");
-		$("#header").addClass("init");
 	});
 
  	/*******************************

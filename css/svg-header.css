@@ -1,5 +1,3 @@
-/*  SVG Animated Header Style  */
-
 /******************
   KEY FRAMES
 ******************/
@@ -30,7 +28,7 @@
 
 @keyframes shrink {
   100% {
-    transform: scale(0.65, 0.65); 
+    transform: scale(0.75, 0.75);
   }
 }
 
@@ -39,42 +37,55 @@
   STYLE
 ******************/
 
-.logo-container {
-  width: 300px;
-  height: 300px;
-  margin: 28px auto 0 auto;
+#logo-wrapper {
+  display: flex;
+  justify-content: center;
 }
 
-#logo {
+.logo-container {
+  width: 400px;
+  height: 400px;
+}
+
+#svg-logo {
   transform-origin: 50% 50%;
   stroke: #d77705;
   stroke-width: 2;
   stroke-dasharray: 2360;
   stroke-dashoffset: 2360;
   animation: offset 4s linear forwards, shrink 2s 2s forwards;
-} 
-
-/*  Mask */
-
-/*.cls-4 {
-  mask: url(#mask);
 }
-
-.cls-9 {
-  filter: url(#luminosity-invert);
-}*/
-
 
 /* Style */
 
 .cls-3,
 .cls-6 {
   fill: transparent;
-  animation: fill-tan 1s 1.5s forwards;
+  animation: fill-tan 1s 2s forwards;
 }
 
-.cls-7, 
-.cls-8{
+.cls-7,
+.cls-8 {
   fill: transparent;
-  animation: fill-t 1s 1.5s forwards;
+  animation: fill-t 1s 2s forwards;
+}
+
+.hide-svg,
+.hide-img {
+  display: none !important;
+}
+#logo-container {
+  width: 250px;
+  height: 250px;
+  margin: 40px auto 0 auto;
+  position: relative;
+  z-index: 100;
+}
+.hide-img {
+  display: none !important;
+}
+
+#svg-alternative {
+  margin: 0 auto;
+  max-width: 225px;
 }

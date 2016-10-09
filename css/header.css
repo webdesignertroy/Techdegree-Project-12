@@ -1,91 +1,30 @@
 /* Header Style */
 
-/* Animation for revealing left-side image */
-@keyframes reveal-leftside {
-	from {
-	 width: 0;
-	}
-	 to {
-	 width: 400px;
-	}
-}
-@keyframes unreveal-leftside {
-	from {
-	 width: 400px;
-	}
-	 to {
-	 width: 0;
-	}
-}
-
-/* Animation for revealing right-side image */
-@keyframes reveal-rightside {
-	from {
-	 width: 0;
-	}
-	 to {
-	 width: 400px;
-	}
-}
-@keyframes unreveal-rightside {
-	from {
-	 width: 400px;
-	}
-	 to {
-	 width: 0;
-	}
-}
-
-/* Animate Background */
-@keyframes add-bkg-red {
-	0% {
-		background: url(../img/header/create.jpg);
-		background-position:  0 50%;
-		background-size: cover;
-		background-repeat: no-repeat;
-	}
-	100% {
-		background: url(../img/header/development.jpg);
-		background-position:  0 50%;
-		background-size: cover;
-		background-repeat: no-repeat;
-	}
-}
-@keyframes add-bkg-blue {
-	0% {
-		background: url(../img/header/development.jpg);
-		background-position: 0 50%;
-		background-size: cover;
-		background-repeat: no-repeat;
-	}
-	100% {
-		background: url(../img/header/create.jpg);
-		background-position:  0 50%;
-		background-size: cover;
-		background-repeat: no-repeat;
-	}
-}
-
 /* Header Elements, Ids and Classes */
 #header {
 	width: 100%;
 	height: 425px;
-	transition: 1s ease-out;
-	background: rgba(252, 255, 217, 0.7);
 	border-bottom: 4px solid #ececec;
+	transition: 1s ease-in !important;
+	background-position: center !important;
+	overflow: hidden;
+	position: relative;
 }
 .init{
 	background: #f3f3f3 !important;
 }
 #header h1 {
 	margin: 0;
-	padding: 20px 0 0 0;
+	padding: 15px 0 15px 0;
 	text-align: center;
 	text-transform: uppercase;
 	letter-spacing: 1.4px;
 	font-size: 1.8rem;
 	color: #864900;
 	transition: .75s ease-out;
+	position: relative;
+	z-index: 100;
+	background: rgba(255, 255, 255, 0.6);
 }
 #header:hover h1 {
 	color: #d77705;
@@ -133,10 +72,10 @@
 	margin-left: 5px;
 }
 .red {
-	animation: add-bkg-red 1s linear forwards;
+	background: #FDF3E7 !important;
 }
 .blue {
-	animation: add-bkg-blue 1s linear forwards;
+	background: #E4F5EC !important;
 }
 .trigger-container {
 	display: none;
@@ -172,4 +111,33 @@
 }
 .logo-image {
 	display: none;
+}
+
+/*  Interactive Backgrounds  */
+
+.interactive-bg {
+	width: 100%;
+	transition: 1s ease-in;
+}
+#create-bg, 
+#develop-bg {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#create-mobile-bg {
+	width: 160%;
+	opacity: 1;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: 1s ease-in;
+	z-index: 1;
+}
+.reveal-left,
+.reveal-right {
+	-webkit-opacity: 0 !important;
+	-moz-opacity: 0 !important;
+	opacity: 0 !important;
 }

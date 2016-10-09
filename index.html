@@ -30,7 +30,7 @@ Portfolio was checked on the following browsers:
 </head>
 <body>
 <div id="wrapper">
- <div id="header" class="init"> 
+  <div id="header" class="init">
     <h1>Troy Rowtham</h1>
     <div id="left-trigger" class="trigger-container">
       <h2 id="left-button" class="ghost">Develop</h2>
@@ -38,15 +38,47 @@ Portfolio was checked on the following browsers:
     <div id="right-trigger" class="trigger-container">
       <h2 id="right-button" class="ghost">Create</h2>
     </div>
-    <div class="logo-image-mobile">
-      <div id="base-mobile"> <img src="img/header/bonsai-flat-full.png" alt="bonsai tree logo"/> </div>
-    </div>
-    <div class="logo-image">
-      <div id="left"> <img src="img/header/bonsai-flat-left.png" alt=""/> </div>
-      <div id="right"> <img src="img/header/bonsai-flat-right.png" alt=""/> </div>
-      <div id="base"> <img src="img/header/bonsai-flat.png" alt="bonsai tree logo"/> </div>
-    </div>
-  </div>  <!-- header ends -->
+    <div id="logo-container">
+        <div id="svg-alternative" class="hide-img"> <img alt="logo" src="http://troyrowtham.com/img/header/logo.png" /> </div>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 771.66 732.1" id="logo" class="hide-svg">
+          <g id="svg-logo">
+            <g class="cls-2">
+              <g id="Ellipse_1_copy" data-name="Ellipse 1 copy" class="cls-2">
+                <g id="Ellipse_1_copy-2" data-name="Ellipse 1 copy">
+                  <path class="cls-3" d="M770.4,274.07c-56.87-147.23-207-240.22-362.71-240.22C232.88,33.85,66.89,152,29.35,326.37-3.71,479.89,73.09,635.78,207.57,713.21c138.6,79.8,319.71,68,445.82-30.72C775.77,586.67,826.93,420.43,770.4,274.07Z" transform="translate(-21.7 -33.85)"></path>
+                </g>
+              </g>
+              <!-- End Ellipse_1_copy -->
+              <g id="brown">
+                <g class="cls-4">
+                  <g id="Ellipse_1_copy-3" data-name="Ellipse 1 copy" class="cls-5">
+                    <path class="cls-6" d="M770.4,274.27C713.53,127,563.42,34,407.69,34,232.88,34,66.89,152.21,29.35,326.57-3.71,480.1,73.09,636,207.57,713.41c138.6,79.8,319.71,68,445.82-30.72C775.77,586.88,826.93,420.64,770.4,274.27Z" transform="translate(-21.7 -33.85)"></path>
+                  </g>
+                </g>
+              </g>
+              <!-- End brown -->
+              <g id="TR">
+                <g>
+                  <path class="cls-7" d="M391.87,277.38H288.31V570.64H229.23V277.38H125.89V234h266v43.4Z" transform="translate(-21.7 -33.85)"></path>
+                  <path class="cls-8" d="M491.34,570.64H432.47V234h95.39q32.23,0,55.64,6.45t38.78,18.48a73.91,73.91,0,0,1,22.77,29.22q7.41,17.19,7.41,38.89a125.81,125.81,0,0,1-3.54,29.11,88.8,88.8,0,0,1-12.46,28.47,97.23,97.23,0,0,1-24.17,24.71q-15.26,11.17-38.67,18L676.1,570.64H609.72l-90-137.71q-5.37,0-12.25-.21a120.49,120.49,0,0,1-15.9-1.72Zm0.21-182.4q6.66,0.86,13.54,1.07t14,0.21a112.54,112.54,0,0,0,31.58-4.08,67.79,67.79,0,0,0,23.63-11.82A50.79,50.79,0,0,0,589,354.83a59.67,59.67,0,0,0,5-25q0-14-3.44-23.85a33.43,33.43,0,0,0-12-16.22q-8.6-6.33-23.1-9.35t-36.63-3H491.55V388.24Z" transform="translate(-21.7 -33.85)"></path>
+                </g>
+              </g>
+              <!-- End TR --> 
+            </g>
+          </g>
+        </svg>
+  	</div>
+      <div id="develop-bg" class="interactive-bg reveal-left">
+        <img alt="develop" src="img/header/development.svg" />
+      </div>
+      <div id="create-bg" class="interactive-bg reveal-right">
+        <img alt="develop" src="img/header/create.svg" />
+      </div>
+      <div id="create-mobile-bg" >
+        <img id="create-mobile-svg" alt="develop" src="img/header/create.svg" />
+      </div>
+  </div>
+  <!-- header ends -->
   <div class="container">
     <nav id="nav">
       <div id="menu-reveal"><span></span></div>
@@ -56,7 +88,8 @@ Portfolio was checked on the following browsers:
         <li><a href="#skills">Skills</a></li>
         <li><a href="#contact">Contact Me</a></li>
       </ul>
-    </nav> <!-- nav ends -->
+    </nav>
+    <!-- nav ends -->
     <div class="clearfix"></div>
     <div class="quote"> Success is a journey, not a destination. The doing is often more important than the outcome. <span>-Authur Ashe-</span> </div>
     <div class="seperator"></div>
@@ -104,7 +137,8 @@ Portfolio was checked on the following browsers:
           <div class="label">WordPress<span id="wordpressc"></span></div>
           <canvas id="wordpress" width="135" height="135"></canvas>
         </div>
-      </div> <!-- skill-details ends -->
+      </div>
+      <!-- skill-details ends -->
       <div class="seperator"></div>
       <div class="clearfix"></div>
       <div id="contact" class="col">
@@ -114,7 +148,8 @@ Portfolio was checked on the following browsers:
           <p id="phone" class="contact-info"> Phone: <a href="tel:3109627560">310.962.7560</a> </p>
           <p id="mail" class="contact-info"> Email: <a href="mail:me@troyrowtham.com">me@troyrowtham.com</a> </p>
         </div>
-      </div> <!-- final-statement ends -->
+      </div>
+      <!-- final-statement ends -->
       <div class="clearfix"></div>
     </div>
     <footer id="footer">
@@ -123,7 +158,8 @@ Portfolio was checked on the following browsers:
         <li id="facebook"><a href="http://facebook.com/rowtham" target="_blank">Facebook</a></li>
         <li id="linkedin"><a href="https://www.linkedin.com/in/savarowtham" target="_blank">LinkedIn</a></li>
       </ul>
-    </footer> <!-- footer ends -->
+    </footer>
+    <!-- footer ends -->
     <div id="back-top" class="hide-div"><a href="#header">Top</a></div>
     <div id="overlay"></div>
     <div id="sm-logo" class="hide-logo">Troy Rowtham</div>
@@ -136,7 +172,7 @@ Portfolio was checked on the following browsers:
 //Preload Images
 function preloader() {
 
-    var imageFolder = ['header/bonsai-flat-right.png', 'header/bonsai-flat-left.png','projects/thumbs/proj3.png','projects/thumbs/proj4.png','projects/thumbs/proj5.png','projects/thumbs/proj7.png','projects/thumbs/proj9.png','projects/thumbs/proj10.png','projects/thumbs/wp1.png','projects/thumbs/wp2.png','projects/thumbs/wp3.png','projects/proj3.jpg','projects/proj4.jpg','projects/proj5.jpg','projects/proj7.jpg','projects/proj9.jpg','projects/proj10.jpg','projects/wp1.jpg','projects/wp2.jpg','projects/wp3.jpg']; //manually add  images
+    var imageFolder = ['header/development.svg', 'header/create.svg','projects/thumbs/proj3.png','projects/thumbs/proj4.png','projects/thumbs/proj5.png','projects/thumbs/proj7.png','projects/thumbs/proj9.png','projects/thumbs/proj10.png','projects/thumbs/wp1.png','projects/thumbs/wp2.png','projects/thumbs/wp3.png','projects/proj3.jpg','projects/proj4.jpg','projects/proj5.jpg','projects/proj7.jpg','projects/proj9.jpg','projects/proj10.jpg','projects/wp1.jpg','projects/wp2.jpg','projects/wp3.jpg']; //manually add  images
     for( var i = 0; i < imageFolder.length; i++){                   
         var img  = new Image();
         img.src = "img/" + imageFolder[i];        
