@@ -36,6 +36,36 @@
 	}
 }
 
+/* Animate Background */
+@keyframes add-bkg-red {
+	0% {
+		background: url(../img/header/create.jpg);
+		background-position:  0 50%;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+	100% {
+		background: url(../img/header/development.jpg);
+		background-position:  0 50%;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+}
+@keyframes add-bkg-blue {
+	0% {
+		background: url(../img/header/development.jpg);
+		background-position: 0 50%;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+	100% {
+		background: url(../img/header/create.jpg);
+		background-position:  0 50%;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+}
+
 /* Header Elements, Ids and Classes */
 #header {
 	width: 100%;
@@ -43,6 +73,9 @@
 	transition: 1s ease-out;
 	background: rgba(252, 255, 217, 0.7);
 	border-bottom: 4px solid #ececec;
+}
+.init{
+	background: #f3f3f3 !important;
 }
 #header h1 {
 	margin: 0;
@@ -100,10 +133,10 @@
 	margin-left: 5px;
 }
 .red {
-	background: rgba(196, 242, 200, 0.7) !important;
+	animation: add-bkg-red 1s linear forwards;
 }
 .blue {
-	background: rgba(252, 255, 217, 0.7)!important;
+	animation: add-bkg-blue 1s linear forwards;
 }
 .trigger-container {
 	display: none;
@@ -112,13 +145,12 @@
 .reveal-left {
 	animation-name: reveal-leftside;
 	animation-duration: 1.2s;
-	animation-delay: 0.15s;
 	animation-timing-function: ease-in-out;
 	animation-fill-mode: both;
 }
 .hide-left {
 	animation-name: unreveal-leftside;
-	animation-duration: 0.75s;
+	animation-duration: 1.5s;
 	animation-timing-function: ease-in-out;
 	animation-fill-mode: both;
 }
@@ -126,13 +158,12 @@
 .reveal-right {
 	animation-name: reveal-rightside;
 	animation-duration: 1.2s;
-	animation-delay: 0.15s;
 	animation-timing-function: ease-in-out;
 	animation-fill-mode: both;
 }
 .hide-right {
 	animation-name: unreveal-rightside;
-	animation-duration: 0.75s;
+	animation-duration: 1.5s;
 	animation-timing-function: ease-in-out;
 	animation-fill-mode: both;
 }

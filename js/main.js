@@ -231,18 +231,20 @@ $(document).ready(function(){
 
  	/************************
 	   HEADER INTERACTIVE 
-	*************************/	
+	*************************/		
 
 	// On left-hemisphere hover in header
 	$("#left-trigger").mouseenter(function(){
 		$("#left").addClass("reveal-left");
 		$("#left").removeClass("hide-left");
 		$("#header").addClass("red");
+		$("#header").removeClass("init");
 	});
 	$("#left-trigger").mouseleave(function(){
 		$("#left").removeClass("reveal-left");
 		$("#left").addClass("hide-left");
 		$("#header").removeClass("red");
+		$("#header").addClass("init");
 	});
 
 	// On right-hemisphere hover in header
@@ -250,11 +252,13 @@ $(document).ready(function(){
 		$("#right").addClass("reveal-right");
 		$("#right").removeClass("hide-right");
 		$("#header").addClass("blue");
+		$("#header").removeClass("init");
 	});
 	$("#right-trigger").mouseleave(function(){
 		$("#right").removeClass("reveal-right");
 		$("#right").addClass("hide-right");
 		$("#header").removeClass("blue");
+		$("#header").addClass("init");
 	});
 
  	/*******************************

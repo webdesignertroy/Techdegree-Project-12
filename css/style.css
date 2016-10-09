@@ -441,6 +441,86 @@ img {
 #back-top {
 	display: none;
 }
+/*  SVG Animated Header Style  */
+
+/******************
+  KEY FRAMES
+******************/
+
+@keyframes offset {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fill-t {
+  100% {
+    fill: #854902;
+  }
+}
+
+@keyframes fill-tan {
+  100% {
+    fill: #d77705;
+  }
+}
+
+@keyframes fill-brown {
+  100% {
+    fill: #854902;
+  }
+}
+
+@keyframes shrink {
+  100% {
+    transform: scale(0.65, 0.65); 
+  }
+}
+
+
+/******************
+  STYLE
+******************/
+
+.logo-container {
+  width: 300px;
+  height: 300px;
+  margin: 28px auto 0 auto;
+}
+
+#logo {
+  transform-origin: 50% 50%;
+  stroke: #d77705;
+  stroke-width: 2;
+  stroke-dasharray: 2360;
+  stroke-dashoffset: 2360;
+  animation: offset 4s linear forwards, shrink 2s 2s forwards;
+} 
+
+/*  Mask */
+
+/*.cls-4 {
+  mask: url(#mask);
+}
+
+.cls-9 {
+  filter: url(#luminosity-invert);
+}*/
+
+
+/* Style */
+
+.cls-3,
+.cls-6 {
+  fill: transparent;
+  animation: fill-tan 1s 1.5s forwards;
+}
+
+.cls-7, 
+.cls-8{
+  fill: transparent;
+  animation: fill-t 1s 1.5s forwards;
+}
 /* Header Style */
 
 /* Animation for revealing left-side image */
@@ -479,6 +559,36 @@ img {
 	}
 }
 
+/* Animate Background */
+@keyframes add-bkg-red {
+	0% {
+		background: url(../img/header/create.jpg);
+		background-position:  0 50%;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+	100% {
+		background: url(../img/header/development.jpg);
+		background-position:  0 50%;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+}
+@keyframes add-bkg-blue {
+	0% {
+		background: url(../img/header/development.jpg);
+		background-position: 0 50%;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+	100% {
+		background: url(../img/header/create.jpg);
+		background-position:  0 50%;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+}
+
 /* Header Elements, Ids and Classes */
 #header {
 	width: 100%;
@@ -486,6 +596,9 @@ img {
 	transition: 1s ease-out;
 	background: rgba(252, 255, 217, 0.7);
 	border-bottom: 4px solid #ececec;
+}
+.init{
+	background: #f3f3f3 !important;
 }
 #header h1 {
 	margin: 0;
@@ -543,10 +656,10 @@ img {
 	margin-left: 5px;
 }
 .red {
-	background: rgba(196, 242, 200, 0.7) !important;
+	animation: add-bkg-red 1s linear forwards;
 }
 .blue {
-	background: rgba(252, 255, 217, 0.7)!important;
+	animation: add-bkg-blue 1s linear forwards;
 }
 .trigger-container {
 	display: none;
@@ -555,13 +668,12 @@ img {
 .reveal-left {
 	animation-name: reveal-leftside;
 	animation-duration: 1.2s;
-	animation-delay: 0.15s;
 	animation-timing-function: ease-in-out;
 	animation-fill-mode: both;
 }
 .hide-left {
 	animation-name: unreveal-leftside;
-	animation-duration: 0.75s;
+	animation-duration: 1.5s;
 	animation-timing-function: ease-in-out;
 	animation-fill-mode: both;
 }
@@ -569,13 +681,12 @@ img {
 .reveal-right {
 	animation-name: reveal-rightside;
 	animation-duration: 1.2s;
-	animation-delay: 0.15s;
 	animation-timing-function: ease-in-out;
 	animation-fill-mode: both;
 }
 .hide-right {
 	animation-name: unreveal-rightside;
-	animation-duration: 0.75s;
+	animation-duration: 1.5s;
 	animation-timing-function: ease-in-out;
 	animation-fill-mode: both;
 }
@@ -585,7 +696,6 @@ img {
 .logo-image {
 	display: none;
 }
-
 /*  Main Navigation  */
 
 #nav {
@@ -1207,7 +1317,7 @@ footer#footer ul li a {
 	}
 	/*  Header Style  */
 	#header {
-		background: #f3f3f3;
+		/*background: #f3f3f3;*/
 	}
 	.logo-image img,  .logo-image-mobile img {
 		width: auto;
@@ -1303,5 +1413,4 @@ footer#footer ul li a {
 		display: none;
 	}
 }
-
 

@@ -1,0 +1,80 @@
+/*  SVG Animated Header Style  */
+
+/******************
+  KEY FRAMES
+******************/
+
+@keyframes offset {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fill-t {
+  100% {
+    fill: #854902;
+  }
+}
+
+@keyframes fill-tan {
+  100% {
+    fill: #d77705;
+  }
+}
+
+@keyframes fill-brown {
+  100% {
+    fill: #854902;
+  }
+}
+
+@keyframes shrink {
+  100% {
+    transform: scale(0.65, 0.65); 
+  }
+}
+
+
+/******************
+  STYLE
+******************/
+
+.logo-container {
+  width: 300px;
+  height: 300px;
+  margin: 28px auto 0 auto;
+}
+
+#logo {
+  transform-origin: 50% 50%;
+  stroke: #d77705;
+  stroke-width: 2;
+  stroke-dasharray: 2360;
+  stroke-dashoffset: 2360;
+  animation: offset 4s linear forwards, shrink 2s 2s forwards;
+} 
+
+/*  Mask */
+
+/*.cls-4 {
+  mask: url(#mask);
+}
+
+.cls-9 {
+  filter: url(#luminosity-invert);
+}*/
+
+
+/* Style */
+
+.cls-3,
+.cls-6 {
+  fill: transparent;
+  animation: fill-tan 1s 1.5s forwards;
+}
+
+.cls-7, 
+.cls-8{
+  fill: transparent;
+  animation: fill-t 1s 1.5s forwards;
+}

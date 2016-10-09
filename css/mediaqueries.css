@@ -59,7 +59,7 @@
 	}
 	/*  Header Style  */
 	#header {
-		background: #f3f3f3;
+		/*background: #f3f3f3;*/
 	}
 	.logo-image img,  .logo-image-mobile img {
 		width: auto;
@@ -155,5 +155,4 @@
 		display: none;
 	}
 }
-
 
