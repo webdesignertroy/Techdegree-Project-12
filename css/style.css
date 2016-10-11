@@ -666,6 +666,7 @@ img {
 	position: absolute;
 	top: 0;
 	left: 0;
+	background-position: center;
 }
 #create-mobile-bg {
 	width: 200%;
@@ -676,6 +677,9 @@ img {
 	transition: 1s ease-in;
 	z-index: 1;
 	animation: fadeInMobileBG 1s 3s linear forwards;
+}
+#create-mobile-svg {
+	transition: 0.75s ease-in;
 }
 .reveal-left,
 .reveal-right {
@@ -1321,6 +1325,11 @@ footer#footer ul li a {
 	-moz-opacity: 1 !important;
 	opacity: 1 !important;
 }
+.fade-out {
+	-webkit-opacity: 0 !important;
+	-moz-opacity: 0 !important;
+	opacity: 0 !important;
+}
 /*  Header Style  */
 #header {
 /*background: #f3f3f3;*/
@@ -1421,7 +1430,7 @@ footer#footer ul li a {
 #mobile-escape {
 	display: none;
 }
-#create-mobile-svg {
-	opacity: 0;
+#create-mobile-bg {
+	width: 100%;
 }
 }

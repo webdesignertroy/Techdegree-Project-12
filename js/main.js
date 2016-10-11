@@ -260,11 +260,13 @@ $(document).ready(function(){
 		if(preLoadTime !== 1) { return;}
 		$("#develop-bg").removeClass("reveal-left");
 		$("#header").addClass("red");
+		$("#create-mobile-svg").addClass("fade-out");
 	});
 	$("#left-trigger").mouseleave(function(){
 		if(preLoadTime !== 1) { return;}
 		$("#develop-bg").addClass("reveal-left");
 		$("#header").removeClass("red");
+		$("#create-mobile-svg").removeClass("fade-out");
 	});
 
 	// On right-hemisphere hover in header / Create-side
@@ -272,11 +274,13 @@ $(document).ready(function(){
 		if(preLoadTime !== 1) { return;}
 		$("#create-bg").removeClass("reveal-right");
 		$("#header").addClass("blue");
+		$("#create-mobile-svg").addClass("fade-out");
 	});
 	$("#right-trigger").mouseleave(function(){
 		if(preLoadTime !== 1) { return;}
 		$("#create-bg").addClass("reveal-right");
 		$("#header").removeClass("blue");
+		$("#create-mobile-svg").removeClass("fade-out");
 	});
 		
  	/*******************************

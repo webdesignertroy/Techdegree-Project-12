@@ -22,7 +22,7 @@ var projects=[ {
 
 	,
 	{
-		name: "Web App Dashboard", url: "https://webdesignertroy.github.io/techdegree/proj9", github: "https://github.com/webdesignertroy/Techdegree-Project-9", description: 'The web application challenge given to me by <a href="https://teamtreehouse.com/techdegree" target="_blank">Treehouse\'s Techdegree Program</a> as the 9th project was by far the most challenging.  The course gave students a mockup of a web app that consisted of charts, pop-ups, tables and finally a form and told to make it interactive using only JavaScript, jQuery, HTML and CSS.  Specifically, working with a third-party plugin chart maker proved difficult.  Documentation was sparse and explanations by the community was few and wide-spread. But, I met the the challenge with wonderful results and growth.', preview: "proj9", tech: ["html", "css", "js", "jquery", "github"]
+		name: "Web App Dashboard", url: "https://webdesignertroy.github.io/techdegree/proj9", github: "https://github.com/webdesignertroy/Techdegree-Project-9", description: 'The web application challenge given to me by <a href="https://teamtreehouse.com/techdegree" target="_blank">Treehouse\'s Techdegree Program</a> as the 9th project was by far the most challenging.  The course gave students a mockup of a web app that consisted of charts, pop-ups, tables and finally a form and then told us to make it interactive using only JavaScript, jQuery, HTML and CSS.  Specifically, working with a third-party plugin chart maker proved difficult.  Documentation was sparse and explanations by the community was few and wide-spread. But, I met the the challenge with wonderful results and growth.', preview: "proj9", tech: ["html", "css", "js", "jquery", "github"]
 	} 
 
 	,
@@ -463,11 +463,13 @@ $(document).ready(function(){
 		if(preLoadTime !== 1) { return;}
 		$("#develop-bg").removeClass("reveal-left");
 		$("#header").addClass("red");
+		$("#create-mobile-svg").addClass("fade-out");
 	});
 	$("#left-trigger").mouseleave(function(){
 		if(preLoadTime !== 1) { return;}
 		$("#develop-bg").addClass("reveal-left");
 		$("#header").removeClass("red");
+		$("#create-mobile-svg").removeClass("fade-out");
 	});
 
 	// On right-hemisphere hover in header / Create-side
@@ -475,11 +477,13 @@ $(document).ready(function(){
 		if(preLoadTime !== 1) { return;}
 		$("#create-bg").removeClass("reveal-right");
 		$("#header").addClass("blue");
+		$("#create-mobile-svg").addClass("fade-out");
 	});
 	$("#right-trigger").mouseleave(function(){
 		if(preLoadTime !== 1) { return;}
 		$("#create-bg").addClass("reveal-right");
 		$("#header").removeClass("blue");
+		$("#create-mobile-svg").removeClass("fade-out");
 	});
 		
  	/*******************************

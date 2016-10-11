@@ -75,6 +75,11 @@
 	-moz-opacity: 1 !important;
 	opacity: 1 !important;
 }
+.fade-out {
+	-webkit-opacity: 0 !important;
+	-moz-opacity: 0 !important;
+	opacity: 0 !important;
+}
 /*  Header Style  */
 #header {
 /*background: #f3f3f3;*/
@@ -175,7 +180,7 @@
 #mobile-escape {
 	display: none;
 }
-#create-mobile-svg {
-	opacity: 0;
+#create-mobile-bg {
+	width: 100%;
 }
 }
