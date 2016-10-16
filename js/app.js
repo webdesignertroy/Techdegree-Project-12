@@ -326,7 +326,7 @@ $(document).ready(function(){
 		FUNCTION DECLARATIONS
 	*************************/	
 	// Function: Don't start interactive backgrounds automatically
-	var preLoadTimer = setInterval(startEvent, 1000);
+	var preLoadTimer = setInterval(startEvent, 3000);
 	
 	function startEvent() {
 		preLoadTime = 1;
