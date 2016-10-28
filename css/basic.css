@@ -19,3 +19,6 @@ img {
 #back-top {
 	display: none;
 }
+a {
+	text-decoration: none;
+}
