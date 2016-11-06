@@ -169,6 +169,8 @@
 	}
 	.secondary {
 		float: right;
+	}.section .inner-text {
+		background: transparent;
 	}
 	/*  Main Navigation Style  */
 	#nav {

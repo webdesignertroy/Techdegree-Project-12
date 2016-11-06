@@ -223,6 +223,14 @@ $(document).ready(function(){
 		FUNCTION EXPRESSIONS
 	*************************/
 
+	//Function generates a current year and adds language for copyright notice.
+	var currentYear =  function() {
+		var d = new Date();
+		var n = d.getFullYear();
+		document.getElementById("copyright").innerHTML = '&copy;' + n + ' Troy Rowtham Portfolio';
+	}// ~end copyright
+	currentYear(); 
+
 	// Function: hide menu items
 	var hideMenu = function() {
 		$navBar.slideUp(700, "swing");
@@ -237,7 +245,7 @@ $(document).ready(function(){
 	var $scroll = function($hash, menuCount) {
 		if( $(this).scrollTop() < 424  && menuCount !== 0) {  // Clicking link before window is 424px is treated differently
 			$('html, body').animate({
-				scrollTop: $( $hash ).offset().top -  menuCount - 245
+				scrollTop: $( $hash ).offset().top -  menuCount - 295
 			}, 500, "swing");		} else {
 			$('html, body').animate({
 				scrollTop: $( $hash ).offset().top -  menuCount - 48

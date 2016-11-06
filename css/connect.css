@@ -1,0 +1,41 @@
+/*  Connect Style  */
+
+#social-connect {
+	margin: 0;
+	padding: 0;
+}
+#social-connect li {
+	display: inline-block;
+	background: url(../img/connect/social-images.svg);
+	background-size: 388px 262px;
+	background-repeat: no-repeat;
+	width: 133px;
+	height: 133px;
+	text-indent: -9999px;
+	margin: 28px 10px 8px 10px;
+	transition: 0.5s ease-in-out;
+	cursor: pointer;
+}
+#social-connect li a {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+#github-connect {
+	background-position: 7px 0px !important;
+}
+#facebook-connect {
+	background-position: -128px 0px !important;
+}
+#linkedin-connect {
+	background-position: -261px 0px !important;
+}
+#github-connect:hover {
+	background-position: 7px -130px !important;
+}
+#facebook-connect:hover {
+	background-position: -128px -130px !important;
+}
+#linkedin-connect:hover {
+	background-position: -261px -130px !important;
+}
