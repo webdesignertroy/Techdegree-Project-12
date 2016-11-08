@@ -5,16 +5,32 @@
 	padding: 0;
 }
 #social-connect li {
+	position: relative;
 	display: inline-block;
 	background: url(../img/connect/social-images.svg);
 	background-size: 388px 262px;
 	background-repeat: no-repeat;
 	width: 133px;
-	height: 133px;
+	height: 122px;
 	text-indent: -9999px;
 	margin: 28px 10px 8px 10px;
-	transition: 0.5s ease-in-out;
 	cursor: pointer;
+	z-index: 1;
+}
+#social-connect li span {
+	position: absolute;
+	top: 0;
+	left: -7px;
+	background: url(../img/connect/social-images.svg);
+	background-size: 403px 246px;
+	background-repeat: no-repeat;
+	width: 133px;
+	height: 122px;
+	opacity: 0;
+	-webkit-transition: opacity 0.75s ease-in-out;
+	-moz-transition: opacity 0.75s ease-in-out;
+	transition: opacity 0.75s ease-in-out;
+	z-index:2;
 }
 #social-connect li a {
 	width: 100%;
@@ -22,20 +38,28 @@
 	display: block;
 }
 #github-connect {
-	background-position: 7px 0px !important;
+	background-position: 7px -7px !important;
 }
 #facebook-connect {
-	background-position: -128px 0px !important;
+	background-position: -128px -7px !important;
 }
 #linkedin-connect {
-	background-position: -261px 0px !important;
+	background-position: -261px -7px !important;
 }
-#github-connect:hover {
-	background-position: 7px -130px !important;
+#github-connect span,
+#facebook-connect span,
+#linkedin-connect span {
+	background-position: -999px -999px !important;
 }
-#facebook-connect:hover {
-	background-position: -128px -130px !important;
+#github-connect:hover span{
+	background-position: 7px -125px !important;
+	opacity: 1;
 }
-#linkedin-connect:hover {
-	background-position: -261px -130px !important;
+#facebook-connect:hover span{
+	background-position: -128px -125px !important;
+	opacity: 1;
+}
+#linkedin-connect:hover span{
+	background-position: -262px -125px !important;
+	opacity: 1;
 }
