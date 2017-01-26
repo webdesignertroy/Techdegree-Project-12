@@ -1337,7 +1337,7 @@ a {
 #linkedin-connect span {
 	background-position: -999px -999px !important;
 }
-#github-connect:hover span{
+/*#github-connect:hover span{
 	background-position: 7px -125px !important;
 	opacity: 1;
 }
@@ -1348,7 +1348,7 @@ a {
 #linkedin-connect:hover span{
 	background-position: -262px -125px !important;
 	opacity: 1;
-}
+}*/
 
 /* Footer Style */
 

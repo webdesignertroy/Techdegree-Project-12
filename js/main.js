@@ -75,9 +75,10 @@ $(document).ready(function(){
 				next();
 			});
 			
-		};
+		}; // end hide #project-image
 		
 	// Function: Listen for when an element (elem) scrolls into view on the screen
+	//      Note: Perfect this.
 		var isScrolledIntoView = function(elem) { 
 			var docViewTop = $(window).scrollTop();
 			var docViewBottom = docViewTop + $(window).height();
@@ -85,7 +86,7 @@ $(document).ready(function(){
 			var elemTop = $(elem).offset().top;
 			var elemBottom = elemTop + $(elem).height();
 			return ((elemTop <= docViewBottom) && (elemBottom >= docViewTop));
-		}; 	
+		}; 	// end Listen for when element scrolls into view
 		
 	// Function: Find correct data in project details array
 		var findData = function(index) {
@@ -106,6 +107,9 @@ $(document).ready(function(){
 					detailHTML += '<a href="' + data.url + '" class="btn" target="_blank">Visit Site</a>';
 					if ( data.github !== "" ) {
 						detailHTML += '<a href="' + data.github + '" class="btn" target="_blank"> Visit GitHub</a>';
+					}
+					if ( data.mockup !== "" ) {
+						detailHTML += '<a id ="show-mock" href="' + data.mockup + '" class="btn" target="_blank"> See Mockup</a>';
 					}
 					detailHTML += '</p>';
 					detailHTML += '<p>' + data.description + '</p>';
