@@ -50,6 +50,7 @@
 }
 .statement {
 	font-size: 1.33rem;
+	position: relative;
 	line-height: 2.3rem;
 	margin: 50px 0;
 }
@@ -131,4 +132,19 @@
 }
 .degree-link:hover {
 	color: rgba(247,153,42, 1);
+}
+.note{
+	font-size: 1rem;
+	line-height: 1.8rem;
+}
+.note li {
+	list-style-type: none;
+	margin-left: -20px;
+}
+.note li:before {
+	content: "*";
+	position: absolute;
+	left: 0;
+    top: 7px;
+    font-size: 1.7rem;
 }
