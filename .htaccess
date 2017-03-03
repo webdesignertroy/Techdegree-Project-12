@@ -15,3 +15,7 @@ ExpiresByType image/x-icon "access 1 year"
 ExpiresDefault "access 2 days"
 </IfModule>
 ## EXPIRES CACHING ##
+
+RewriteEngine On
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://troyrowtham.com/$1 [R=301,L]
