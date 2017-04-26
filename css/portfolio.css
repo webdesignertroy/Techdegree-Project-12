@@ -301,3 +301,12 @@
 .transparent {
 	opacity: 0 !important;
 }
+.transparent-image {
+	opacity: 0 !important;
+	transform: translateX(-75px);
+}
+.transparent-image-after {
+	transform: translateX(75px);
+}
+
+

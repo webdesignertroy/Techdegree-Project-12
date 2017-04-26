@@ -67,9 +67,9 @@ $(document).ready(function(){
 		var newView = function(direct) {
 			$projectTech.addClass("transparent");
 			$(".layout-details").addClass("transparent");
-			$projectImage.addClass("transparent").delay(500).queue(function(next){
+			$projectImage.addClass("transparent-image").delay(500).queue(function(next){
 				findData(direct);
-				$projectImage.removeClass("transparent");
+				$projectImage.removeClass("transparent-image");
 				$projectTech.removeClass("transparent");
 				$(".layout-details").removeClass("transparent");
 				next();
@@ -363,9 +363,13 @@ $(document).ready(function(){
 			opacity: 0
 		}, 500)
 
+		// Slide Image
+		$projectImage.addClass("slide ")
+
 		// Fade-out overlay
 		$overlay.animate({
 			opacity: 0
+
 		}, 500, function(){
 			$overlay.removeClass("show");
 			$projectDetails.remove();

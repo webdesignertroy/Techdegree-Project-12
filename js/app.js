@@ -2,6 +2,13 @@
    PROJECTS DATA
 *******************************/
 var projects=[ {
+		
+		name: "Restaurant Site (Sample)", url: "https://sample1.troyrowtham.com/", github: "", mockup:"", description: 'In designing this popular restaurant\'s site, via a marketing firm, the biggest request by the client was to create an online menu with separate prices for lunch, non-event dinners and live-event dinners.  I created a toggle that shifted between different versions of the menu at a press of a button. I also installed an event manager on the backend so the client could present nighttime live events on the front-end with ease.', preview: "wp5", tech: ["wordpress", "html", "css", "js", "jquery"]
+	},
+	{
+		name: "Business Site (Sample)", url: "https://sample2.troyrowtham.com/", github: "", mockup:"", description: 'Per request a marketing firm, I created an insurance company\'s website.  I used large, bold imagery and animated tools to help push a message of professionalism and experience. This site is filled with call-to-action cues that propel a visitor to ask for more information ("a quote") at the end of the visit.', preview: "wp6", tech: ["wordpress", "html", "css", "js", "jquery"]
+	},
+	{
 		name: "Responsive Registration Form*", url: "https://webdesignertroy.github.io/techdegree/proj3/", github: "https://github.com/webdesignertroy/Techdegreee-Project-3", mockup:"http://troyrowtham.com/pdfs/proj-3.pdf", description: 'This third project challenge from <a href="https://teamtreehouse.com/techdegree" target="_blank">Treehouse\'s Techdegree Program</a> asked students to construct a responsive online form from scratch. I used HTML and CSS to build a mock newsletter contact form consisting of basic input fields from text boxes to pull-down menus.  Validation functions ensure that visitors fill out required fields completely and correctly.  The form comes complete with a reset button.  Although not a fully functioning form, this exercise still taught me the values of considering user experience and accessibility while building a form interface.', preview: "proj3", tech: ["html", "css", "github"]
 	},
 	{
@@ -21,12 +28,12 @@ var projects=[ {
 	} ,
 	{
 		name: "Public API Gallery*", url: "https://webdesignertroy.github.io/techdegree/proj10", github: "https://github.com/webdesignertroy/Techdegree-Project-10", mockup:"", description: 'I personally found <a href="https://teamtreehouse.com/techdegree" target="_blank">Treehouse\'s Techdegree Program\'s</a> 10th project the most rewarding and useful. Students generated a public API call from at least two sources using only JavaScript, jQuery, HTML and CSS.  Building functional, interactive sites that visitors could actually use was why I started the Program.  This app called on iTunes\' and YouTube\'s APIs to generate a movie and show search library. Results from the API mismatch generates great fun.', preview: "proj10", tech: ["html", "css", "js", "jquery", "github"]
+	}, 
+	{
+		name: "Company Site", url: "http://sterlingpacificmeat.com/", github: "", mockup:"", description: 'The client wanted us to update his very old static company site. We decided to do an entire revamp of the site creating a responsive, dynamic and clean look.  We worked with WordPress\'s CMS so the client achieved the new ability to update the site himself.  We also added a custom <em>agriculture futures</em> page fueled with data from Yahoo! Finance.', preview: "wp4", tech: ["wordpress", "html", "css", "js", "jquery"] 
 	},
 	{
 		name: "General Contractor Site", url: "https://2mgconstruction.com/", github: "", mockup:"", description: 'I refactored 2MGconstruction to keep up with mobile requests. The old site was outdated, so I started from scratch. I kept the traditional menu, but augmented it with a pull-down version for mobile devices. I replaced slideshows with image grids to give the visitor upfront choices all at once. I added a review section where <em>happy</em> clients could comment on the work completed by 2MGconstruction.', preview: "wp1", tech: ["wordpress", "html", "css", "js", "jquery"] 
-	}, 
-	{
-		name: "Company Site", url: "http://dev.sterlingpacificmeat.com/", github: "", mockup:"http://troyrowtham.com/pdfs/proj-wp4.pdf", description: 'The client wanted us to update his very old static company site (currently in development). We decided to do an entire revamp of the site creating a responsive, dynamic and clean look.  We worked with WordPress\'s CMS so the client achieved the new ability to update the site himself.  We also added a custom <em>agriculture futures</em> page fueled with data from Yahoo! Finance.', preview: "wp4", tech: ["wordpress", "html", "css", "js", "jquery"] 
 	},
 	{
 		name: "Writer's Page", url: "https://questionsformrright.com", github: "", mockup:"", description: 'Andrea Guzman - Writer\'s Page was created to promote Andrea\'s guide to a healthy relationship, <em>20 Questions for Mr. Right</em>. I created a clean, simple design with call-to-action tools and buttons that focused on prodding the visitor to select links to shops where they could purchase the guide. Among the tools was a promotional video, complete with closed caption. I also provided Andrea with a blog to keep her socially connected to her audience.', preview: "wp2", tech: ["wordpress", "html", "css", "js", "jquery"]
@@ -260,9 +267,9 @@ $(document).ready(function(){
 		var newView = function(direct) {
 			$projectTech.addClass("transparent");
 			$(".layout-details").addClass("transparent");
-			$projectImage.addClass("transparent").delay(500).queue(function(next){
+			$projectImage.addClass("transparent-image").delay(500).queue(function(next){
 				findData(direct);
-				$projectImage.removeClass("transparent");
+				$projectImage.removeClass("transparent-image");
 				$projectTech.removeClass("transparent");
 				$(".layout-details").removeClass("transparent");
 				next();
@@ -556,9 +563,13 @@ $(document).ready(function(){
 			opacity: 0
 		}, 500)
 
+		// Slide Image
+		$projectImage.addClass("slide ")
+
 		// Fade-out overlay
 		$overlay.animate({
 			opacity: 0
+
 		}, 500, function(){
 			$overlay.removeClass("show");
 			$projectDetails.remove();
