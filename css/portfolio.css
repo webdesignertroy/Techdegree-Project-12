@@ -308,5 +308,13 @@
 .transparent-image-after {
 	transform: translateX(75px);
 }
+.transparent-image2 {
+	opacity: 0 !important;
+	transform: translateX(75px);
+}
+.transparent-image2-after {
+	transform: translateX(-75px);
+}
+
 
 

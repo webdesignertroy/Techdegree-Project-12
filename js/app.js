@@ -257,8 +257,9 @@ $(document).ready(function(){
 	// Function: scrolls to 'targeted id' on page
 	var $scroll = function($hash, menuCount) {
 		if( $(this).scrollTop() < 424  && menuCount !== 0) {  // Clicking link before window is 424px is treated differently
-			$('html, body').animate({
-				scrollTop: $( $hash ).offset().top -  menuCount - 295
+			console.log("Im I here");
+			$('html, body').animate({ 
+				scrollTop: $( $hash ).offset().top -  menuCount - 295 /* was -295 */
 			}, 500, "swing");		} else {
 			$('html, body').animate({
 				scrollTop: $( $hash ).offset().top -  menuCount - 48
@@ -267,16 +268,27 @@ $(document).ready(function(){
 	}; // end scroll function
 	
 	// Function: Hide #project-image
-		var newView = function(direct) {
+		var newView = function(direct, animateDir) {
 			$projectTech.addClass("transparent");
 			$(".layout-details").addClass("transparent");
-			$projectImage.addClass("transparent-image").delay(500).queue(function(next){
-				findData(direct);
-				$projectImage.removeClass("transparent-image");
-				$projectTech.removeClass("transparent");
-				$(".layout-details").removeClass("transparent");
-				next();
-			});
+			if ( animateDir === "back") {
+				$projectImage.addClass("transparent-image").delay(500).queue(function(next){
+					findData(direct);
+					$projectImage.removeClass("transparent-image");
+					$projectTech.removeClass("transparent");
+					$(".layout-details").removeClass("transparent");
+					next();
+				});
+			} else {
+				$projectImage.addClass("transparent-image2").delay(500).queue(function(next){
+					findData(direct);
+					$projectImage.removeClass("transparent-image2");
+					$projectTech.removeClass("transparent");
+					$(".layout-details").removeClass("transparent");
+					next();
+				});
+			}
+
 			
 		}; // end hide #project-image
 		
@@ -404,6 +416,14 @@ $(document).ready(function(){
 
 	// On menu click, reveal or hide mobile navigation
 	$menuReveal.on("click", function(){
+		// If menu button is above 100px on screen
+		//   scroll down
+		if ( $menuReveal[0].offsetTop > 424 ) { 
+			$('html, body').animate({
+				scrollTop: $("#nav").offset().top + 100
+			}, 500, "swing");
+
+		}
 		// toggles MenuReveal button
 		if( $navBar.css("display") === "none" ) {
 			showMenu();
@@ -596,25 +616,27 @@ $(document).ready(function(){
 	// On right-arrow click event (bubbling event issues)
 	$wrapper.on("click", "#arrow-right", function(){
 		var detailsIndex = parseInt($(".image-details").attr("data-image-index"));
+		var animateLeft = "fwd";
 		if ( detailsIndex < projects.length - 1 ) {
 			var directions = detailsIndex + 1;
-			newView(directions);
+			newView(directions, animateLeft);
 			
 		} else {
 			var directions = 0;
-			newView(directions);
+			newView(directions, animateLeft);
 		}
 	}); // end right-arrow click event
 
 	// On left arrow click event (bubbling event issues)
 	$wrapper.on("click", "#arrow-left", function(){
 		var detailsIndex = parseInt($(".image-details").attr("data-image-index"));
+		var animateRight = "back";
 		if ( detailsIndex > 0 ) {
 			var directions = detailsIndex - 1;
-			newView(directions);
+			newView(directions, animateRight);
 		} else {
 			var directions = projects.length - 1;
-			newView(directions);
+			newView(directions, animateRight);
 		}
 	}); // end left-arrow click event
 
@@ -624,7 +646,7 @@ $(document).ready(function(){
 		switch(e.keyCode) {
 			case 27:
 				//Fade out overlay when[ESC=27] is keyed.
-				$overlay.trigger("click");
+				$overlay.trigger("click"); 
 			break;
 			case 37:
 				//Advances slideshow left on left-arrow [37] key.
