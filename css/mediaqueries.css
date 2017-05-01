@@ -119,8 +119,10 @@
 		right: 0;
 	}
 	.trigger-container {
-		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: -ms-flex;
 		display: flex;
+		-webkit-justify-content: center;
 		justify-content: center;
 	}
 	#left-button {

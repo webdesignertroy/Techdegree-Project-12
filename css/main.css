@@ -77,9 +77,11 @@
 	margin: 40px 0;
 }
 .banner {
+	display: -webkit-flex;
 	display: -ms-flex;
 	display: flex;
 	height: 58px;
+	-webkit-flex-direction: row;
 	flex-direction: row;
 	align-items: center;
 }

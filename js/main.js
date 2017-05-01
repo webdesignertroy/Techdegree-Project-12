@@ -54,7 +54,6 @@ $(document).ready(function(){
 	// Function: scrolls to 'targeted id' on page
 	var $scroll = function($hash, menuCount) {
 		if( $(this).scrollTop() < 424  && menuCount !== 0) {  // Clicking link before window is 424px is treated differently
-			console.log("Im I here");
 			$('html, body').animate({ 
 				scrollTop: $( $hash ).offset().top -  menuCount - 295 /* was -295 */
 			}, 500, "swing");		} else {
@@ -278,7 +277,7 @@ $(document).ready(function(){
 	   HEADER INTERACTIVE 
 	*************************/		
 	// Detect Browser if I.E. is being used
-	  if ( !!navigator.userAgent.match(/Trident\/7\./) || /Edge/.test(navigator.userAgent)  ) {
+	  if ( !!navigator.userAgent.match(/Trident\/7\./) || /Edge/.test(navigator.userAgent) || !!navigator.userAgent.match(/iPhone/i) || !!navigator.userAgent.match(/iPod/i) ) {
 		  $("#svg-alternative").removeClass("hide-img");
 		  $("#logo").addClass("hide-svg");
     } else {

@@ -38,7 +38,9 @@
 ******************/
 
 #logo-wrapper {
+  display: -webkit-flex;
   display: flex;
+  -webkit-justify-content: center;
   justify-content: center;
 }
 
@@ -53,6 +55,7 @@
   stroke-width: 2;
   stroke-dasharray: 2360;
   stroke-dashoffset: 2360;
+  -webkit-animation: offset 4s linear forwards, shrink 2s 2s forwards;
   animation: offset 4s linear forwards, shrink 2s 2s forwards;
 }
 
@@ -61,12 +64,14 @@
 .cls-3,
 .cls-6 {
   fill: transparent;
+  -webkit-animation: fill-tan 1s 2s forwards;
   animation: fill-tan 1s 2s forwards;
 }
 
 .cls-7,
 .cls-8 {
   fill: transparent;
+  -webkit-animation: fill-t 1s 2s forwards;
   animation: fill-t 1s 2s forwards;
 }
 

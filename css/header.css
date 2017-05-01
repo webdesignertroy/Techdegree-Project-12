@@ -89,12 +89,22 @@
 }
 /* Animation Behavior for left-side image*/
 .reveal-left {
+	-webkit-animation-name: reveal-leftside;
+	-webkit-animation-duration: 1.2s;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-fill-mode: both;
+
 	animation-name: reveal-leftside;
 	animation-duration: 1.2s;
 	animation-timing-function: ease-in-out;
 	animation-fill-mode: both;
 }
 .hide-left {
+	-webkit-animation-name: unreveal-leftside;
+	-webkit-animation-duration: 1.5s;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-fill-mode: both;
+
 	animation-name: unreveal-leftside;
 	animation-duration: 1.5s;
 	animation-timing-function: ease-in-out;
@@ -102,12 +112,23 @@
 }
 /* Animation Behavior for right-side image*/
 .reveal-right {
+
+	-webkit-animation-name: reveal-rightside;
+	-webkit-animation-duration: 1.2s;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-fill-mode: both;
+
 	animation-name: reveal-rightside;
 	animation-duration: 1.2s;
 	animation-timing-function: ease-in-out;
 	animation-fill-mode: both;
 }
 .hide-right {
+	-webkit-animation-name: unreveal-rightside;
+	-webkit-animation-duration: 1.5s;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-fill-mode: both;
+
 	animation-name: unreveal-rightside;
 	animation-duration: 1.5s;
 	animation-timing-function: ease-in-out;
@@ -142,6 +163,7 @@
 	left: 0;
 	transition: 1s ease-in;
 	z-index: 1;
+	-webkit-animation: fadeInMobileBG 1s 3s linear forwards;
 	animation: fadeInMobileBG 1s 3s linear forwards;
 }
 #create-mobile-svg {

@@ -9,7 +9,7 @@ var projects=[ {
 		name: "Business Site (Sample)", url: "https://sample2.troyrowtham.com/", github: "", mockup:"", description: 'Per request a marketing firm, I created an insurance company\'s website.  I used large, bold imagery and animated tools to help push a message of professionalism and experience. This site is filled with call-to-action cues that propel a visitor to ask for more information ("a quote") at the end of the visit.', preview: "wp6", tech: ["wordpress", "html", "css", "js", "jquery"]
 	},
 	{
-		name: "Landing Page (Sample)", url: "https://sample3.troyrowtham.com/", github: "", mockup:"http://troyrowtham.com/pdfs/proj-wp7.pdf", description: 'This is a sample of a landing page created per mockup visual for a local college. This WordPress Site is light, customized and image optimized. It loads approximately 90% faster than all tested websites on Pingdom. It also scores well with PageSpeed Insights.', preview: "wp7", tech: ["wordpress", "html", "css", "js", "jquery"]
+		name: "Landing Page (Sample)", url: "https://sample3.troyrowtham.com/", github: "", mockup:"http://troyrowtham.com/pdfs/proj-wp7.pdf", description: 'This is a sample of a landing page created per mockup visual for a local college. This WordPress Site is light, customized and image optimized. It loads approximately 90% faster than all tested websites on Pingdom. It also scores well with PageSpeed Insights. Supreme for marketers who want to target smartphone users but not break the budget.', preview: "wp7", tech: ["wordpress", "html", "css", "js", "jquery"]
 	},
 	{
 		name: "Responsive Registration Form*", url: "https://webdesignertroy.github.io/techdegree/proj3/", github: "https://github.com/webdesignertroy/Techdegreee-Project-3", mockup:"http://troyrowtham.com/pdfs/proj-3.pdf", description: 'This third project challenge from <a href="https://teamtreehouse.com/techdegree" target="_blank">Treehouse\'s Techdegree Program</a> asked students to construct a responsive online form from scratch. I used HTML and CSS to build a mock newsletter contact form consisting of basic input fields from text boxes to pull-down menus.  Validation functions ensure that visitors fill out required fields completely and correctly.  The form comes complete with a reset button.  Although not a fully functioning form, this exercise still taught me the values of considering user experience and accessibility while building a form interface.', preview: "proj3", tech: ["html", "css", "github"]
@@ -257,7 +257,6 @@ $(document).ready(function(){
 	// Function: scrolls to 'targeted id' on page
 	var $scroll = function($hash, menuCount) {
 		if( $(this).scrollTop() < 424  && menuCount !== 0) {  // Clicking link before window is 424px is treated differently
-			console.log("Im I here");
 			$('html, body').animate({ 
 				scrollTop: $( $hash ).offset().top -  menuCount - 295 /* was -295 */
 			}, 500, "swing");		} else {
@@ -481,7 +480,7 @@ $(document).ready(function(){
 	   HEADER INTERACTIVE 
 	*************************/		
 	// Detect Browser if I.E. is being used
-	  if ( !!navigator.userAgent.match(/Trident\/7\./) || /Edge/.test(navigator.userAgent)  ) {
+	  if ( !!navigator.userAgent.match(/Trident\/7\./) || /Edge/.test(navigator.userAgent) || !!navigator.userAgent.match(/iPhone/i) || !!navigator.userAgent.match(/iPod/i) ) {
 		  $("#svg-alternative").removeClass("hide-img");
 		  $("#logo").addClass("hide-svg");
     } else {

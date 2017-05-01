@@ -484,7 +484,9 @@ a {
 ******************/
 
 #logo-wrapper {
+  display: -webkit-flex;
   display: flex;
+  -webkit-justify-content: center;
   justify-content: center;
 }
 
@@ -499,6 +501,7 @@ a {
   stroke-width: 2;
   stroke-dasharray: 2360;
   stroke-dashoffset: 2360;
+  -webkit-animation: offset 4s linear forwards, shrink 2s 2s forwards;
   animation: offset 4s linear forwards, shrink 2s 2s forwards;
 }
 
@@ -507,12 +510,14 @@ a {
 .cls-3,
 .cls-6 {
   fill: transparent;
+  -webkit-animation: fill-tan 1s 2s forwards;
   animation: fill-tan 1s 2s forwards;
 }
 
 .cls-7,
 .cls-8 {
   fill: transparent;
+  -webkit-animation: fill-t 1s 2s forwards;
   animation: fill-t 1s 2s forwards;
 }
 
@@ -626,12 +631,22 @@ a {
 }
 /* Animation Behavior for left-side image*/
 .reveal-left {
+	-webkit-animation-name: reveal-leftside;
+	-webkit-animation-duration: 1.2s;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-fill-mode: both;
+
 	animation-name: reveal-leftside;
 	animation-duration: 1.2s;
 	animation-timing-function: ease-in-out;
 	animation-fill-mode: both;
 }
 .hide-left {
+	-webkit-animation-name: unreveal-leftside;
+	-webkit-animation-duration: 1.5s;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-fill-mode: both;
+
 	animation-name: unreveal-leftside;
 	animation-duration: 1.5s;
 	animation-timing-function: ease-in-out;
@@ -639,12 +654,23 @@ a {
 }
 /* Animation Behavior for right-side image*/
 .reveal-right {
+
+	-webkit-animation-name: reveal-rightside;
+	-webkit-animation-duration: 1.2s;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-fill-mode: both;
+
 	animation-name: reveal-rightside;
 	animation-duration: 1.2s;
 	animation-timing-function: ease-in-out;
 	animation-fill-mode: both;
 }
 .hide-right {
+	-webkit-animation-name: unreveal-rightside;
+	-webkit-animation-duration: 1.5s;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-fill-mode: both;
+
 	animation-name: unreveal-rightside;
 	animation-duration: 1.5s;
 	animation-timing-function: ease-in-out;
@@ -679,6 +705,7 @@ a {
 	left: 0;
 	transition: 1s ease-in;
 	z-index: 1;
+	-webkit-animation: fadeInMobileBG 1s 3s linear forwards;
 	animation: fadeInMobileBG 1s 3s linear forwards;
 }
 #create-mobile-svg {
@@ -864,9 +891,11 @@ a {
 	margin: 40px 0;
 }
 .banner {
+	display: -webkit-flex;
 	display: -ms-flex;
 	display: flex;
 	height: 58px;
+	-webkit-flex-direction: row;
 	flex-direction: row;
 	align-items: center;
 }
@@ -970,9 +999,12 @@ a {
 .project-details-dom {
 	max-width: 960px;
 	margin: 20px auto;
+	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
+	-webkit-flex-direction: row;
 	flex-direction: row;
+	-webkit-flex-wrap: wrap;
 	flex-wrap: wrap;
 }
 .project-links {
@@ -995,7 +1027,9 @@ a {
 #overlay {
 	position: fixed;
 	display: none;
+	-webkit-justify-content: center;
 	justify-content: center;
+	-webkit-direction: column;
 	flex-direction: column;
 	top: 0;
 	left: 0;
@@ -1011,7 +1045,8 @@ a {
 	cursor: url(../img/icons/close-icon.png), crosshair;
 }
 .show {
-	display: -ms-flexbox !important;
+	display: -webkit-flex !important;
+	display: -ms-flex !important;
 	display: flex !important;
 }
 #cursor-border-left, #cursor-border-right {
@@ -1035,8 +1070,10 @@ a {
 	margin: 0 auto;
 }
 #project-image {
+	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
+	-webkit-justify-content: center;
 	justify-content: center;
 	margin-top: -176px;
 	transition: .3s ease-out;
@@ -1056,10 +1093,14 @@ a {
 	transition: .3s ease-out;
 }
 .layout-details .btn-container {
+	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
+	-webkit-justify-content: center;
 	justify-content: center;
+	-webkit-flex-direction: row;
 	flex-direction: row;
+	-webkit-flex-wrap: nowrap;
 	flex-wrap: nowrap;
 }
 .layout-details .btn {
@@ -1110,8 +1151,10 @@ a {
 
 /*  SVG Map  */
 #project-tech {
+	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
+	-webkit-justify-content: flex-start;
 	justify-content: flex-start;
 	-webkit-opacity: 0;
 	-moz-opacity: 0;
@@ -1125,6 +1168,7 @@ a {
 	transition: .3s ease-out;
 }
 .layout-skills {
+	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
 }
@@ -1259,10 +1303,14 @@ a {
 /*  Skills Style  */
 
 #skill-details {
-	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: -ms-flex;
 	display: flex;
+	-webkit-flex-direction: row;
 	flex-direction: row;
+	-webkit-justify-content: center;
 	justify-content: center;
+	-webkit-flex-wrap: wrap;
 	flex-wrap: wrap;
 	margin-top: 60px;
 }
@@ -1520,8 +1568,10 @@ footer a {
 		right: 0;
 	}
 	.trigger-container {
-		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: -ms-flex;
 		display: flex;
+		-webkit-justify-content: center;
 		justify-content: center;
 	}
 	#left-button {

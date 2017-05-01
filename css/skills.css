@@ -1,10 +1,14 @@
 /*  Skills Style  */
 
 #skill-details {
-	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: -ms-flex;
 	display: flex;
+	-webkit-flex-direction: row;
 	flex-direction: row;
+	-webkit-justify-content: center;
 	justify-content: center;
+	-webkit-flex-wrap: wrap;
 	flex-wrap: wrap;
 	margin-top: 60px;
 }

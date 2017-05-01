@@ -33,9 +33,12 @@
 .project-details-dom {
 	max-width: 960px;
 	margin: 20px auto;
+	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
+	-webkit-flex-direction: row;
 	flex-direction: row;
+	-webkit-flex-wrap: wrap;
 	flex-wrap: wrap;
 }
 .project-links {
@@ -58,7 +61,9 @@
 #overlay {
 	position: fixed;
 	display: none;
+	-webkit-justify-content: center;
 	justify-content: center;
+	-webkit-direction: column;
 	flex-direction: column;
 	top: 0;
 	left: 0;
@@ -74,7 +79,8 @@
 	cursor: url(../img/icons/close-icon.png), crosshair;
 }
 .show {
-	display: -ms-flexbox !important;
+	display: -webkit-flex !important;
+	display: -ms-flex !important;
 	display: flex !important;
 }
 #cursor-border-left, #cursor-border-right {
@@ -98,8 +104,10 @@
 	margin: 0 auto;
 }
 #project-image {
+	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
+	-webkit-justify-content: center;
 	justify-content: center;
 	margin-top: -176px;
 	transition: .3s ease-out;
@@ -119,10 +127,14 @@
 	transition: .3s ease-out;
 }
 .layout-details .btn-container {
+	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
+	-webkit-justify-content: center;
 	justify-content: center;
+	-webkit-flex-direction: row;
 	flex-direction: row;
+	-webkit-flex-wrap: nowrap;
 	flex-wrap: nowrap;
 }
 .layout-details .btn {
@@ -173,8 +185,10 @@
 
 /*  SVG Map  */
 #project-tech {
+	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
+	-webkit-justify-content: flex-start;
 	justify-content: flex-start;
 	-webkit-opacity: 0;
 	-moz-opacity: 0;
@@ -188,6 +202,7 @@
 	transition: .3s ease-out;
 }
 .layout-skills {
+	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
 }
