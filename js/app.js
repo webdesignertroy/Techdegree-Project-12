@@ -2,6 +2,9 @@
    PROJECTS DATA
 *******************************/
 var projects=[ {
+		name: "Web Development Site", url: "https://webdesignertroy.com/", github: "", mockup:"", description: 'My web development site contains a lot of custom-created helpful animation including a sticky menu, a contact popup, interactive "slide-in" text and interactive contact forms.', preview: "wp8", tech: ["wordpress", "html", "css", "js", "jquery"]
+	},
+	{
 		
 		name: "Restaurant Site (Sample)", url: "https://sample1.troyrowtham.com/", github: "", mockup:"", description: 'In designing this popular restaurant\'s site, via a marketing firm, the biggest request by the client was to create an online menu with separate prices for lunch, non-event dinners and live-event dinners.  I created a toggle that shifted between different versions of the menu at a press of a button. I also installed an event manager on the backend so the client could present nighttime live events on the front-end with ease.', preview: "wp5", tech: ["wordpress", "html", "css", "js", "jquery"]
 	},
@@ -226,7 +229,7 @@ $(document).ready(function(){
 	var $cursorBorderRight = $('<div id="cursor-border-right"></div>');
 	var $arrowLeft = $('<div id="arrow-left"></div>');
 	var $arrowRight = $('<div id="arrow-right"></div>');
-	var $mobileEscape = $('<div id="esc-container"><div id="mobile-escape">Close<span>x</span></div></div>');
+	var $mobileEscape = $('<div id="esc-container"><div id="mobile-escape">Close<span class="close-icon">&#xf00d;</span></div></div>');
 	
 	var inView = false;
 	
@@ -480,7 +483,7 @@ $(document).ready(function(){
 	   HEADER INTERACTIVE 
 	*************************/		
 	// Detect Browser if I.E. is being used
-	  if ( !!navigator.userAgent.match(/Trident\/7\./) || /Edge/.test(navigator.userAgent) || !!navigator.userAgent.match(/iPhone/i) || !!navigator.userAgent.match(/iPod/i) ) {
+	  if ( !!navigator.userAgent.match(/Trident\/7\./) || /Edge/.test(navigator.userAgent) || !!navigator.userAgent.match(/iPhone/i) || !!navigator.userAgent.match(/iPod/i) || !!navigator.userAgent.match(/iPad/i)) {
 		  $("#svg-alternative").removeClass("hide-img");
 		  $("#logo").addClass("hide-svg");
     } else {

@@ -2,6 +2,9 @@
    PROJECTS DATA
 *******************************/
 var projects=[ {
+		name: "Web Development Site", url: "https://webdesignertroy.com/", github: "", mockup:"", description: 'My web development site contains a lot of custom-created helpful animation including a sticky menu, a contact popup, interactive "slide-in" text and interactive contact forms.', preview: "wp8", tech: ["wordpress", "html", "css", "js", "jquery"]
+	},
+	{
 		
 		name: "Restaurant Site (Sample)", url: "https://sample1.troyrowtham.com/", github: "", mockup:"", description: 'In designing this popular restaurant\'s site, via a marketing firm, the biggest request by the client was to create an online menu with separate prices for lunch, non-event dinners and live-event dinners.  I created a toggle that shifted between different versions of the menu at a press of a button. I also installed an event manager on the backend so the client could present nighttime live events on the front-end with ease.', preview: "wp5", tech: ["wordpress", "html", "css", "js", "jquery"]
 	},

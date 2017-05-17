@@ -284,7 +284,7 @@
     position: fixed;
     text-align: center;
     top: 8px;
-    right: 58px;
+    right: 5px;
     height: 36px;
     text-transform: uppercase;
     padding-top: 15px;
@@ -313,6 +313,10 @@
 	padding: 3px 5px 3px 5px;
 	z-index: 105;
 }
+.close-icon {
+	font-family:"FontAwesome";
+	z-index: 9999;
+}
 .transparent {
 	opacity: 0 !important;
 }
@@ -330,6 +334,3 @@
 .transparent-image2-after {
 	transform: translateX(-75px);
 }
-
-
-

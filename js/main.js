@@ -23,7 +23,7 @@ $(document).ready(function(){
 	var $cursorBorderRight = $('<div id="cursor-border-right"></div>');
 	var $arrowLeft = $('<div id="arrow-left"></div>');
 	var $arrowRight = $('<div id="arrow-right"></div>');
-	var $mobileEscape = $('<div id="esc-container"><div id="mobile-escape">Close<span>x</span></div></div>');
+	var $mobileEscape = $('<div id="esc-container"><div id="mobile-escape">Close<span class="close-icon">&#xf00d;</span></div></div>');
 	
 	var inView = false;
 	
@@ -277,7 +277,7 @@ $(document).ready(function(){
 	   HEADER INTERACTIVE 
 	*************************/		
 	// Detect Browser if I.E. is being used
-	  if ( !!navigator.userAgent.match(/Trident\/7\./) || /Edge/.test(navigator.userAgent) || !!navigator.userAgent.match(/iPhone/i) || !!navigator.userAgent.match(/iPod/i) ) {
+	  if ( !!navigator.userAgent.match(/Trident\/7\./) || /Edge/.test(navigator.userAgent) || !!navigator.userAgent.match(/iPhone/i) || !!navigator.userAgent.match(/iPod/i) || !!navigator.userAgent.match(/iPad/i)) {
 		  $("#svg-alternative").removeClass("hide-img");
 		  $("#logo").addClass("hide-svg");
     } else {
