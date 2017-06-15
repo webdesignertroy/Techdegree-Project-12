@@ -3,6 +3,13 @@
 *******************************/
 var projects=[ {
 		name: "Web Development Site", url: "https://webdesignertroy.com/", github: "", mockup:"", description: 'My web development site contains a lot of custom-created helpful animation including a sticky menu, a contact popup, interactive "slide-in" text and interactive contact forms.', preview: "wp8", tech: ["wordpress", "html", "css", "js", "jquery"]
+	}, 
+	{
+		name: "Company Site", url: "http://sterlingpacificmeat.com/", github: "", mockup:"", description: 'The client wanted us to update his very old static company site. We decided to do an entire revamp of the site creating a responsive, dynamic and clean look.  We worked with WordPress\'s CMS so the client achieved the new ability to update the site himself.  We also added a custom <em>agriculture futures</em> page fueled with data from Yahoo! Finance.', preview: "wp4", tech: ["wordpress", "html", "css", "js", "jquery"] 
+	},
+	{
+		
+		name: "One-Page Site", url: "https://perrisoases.com/", github: "", mockup:"", description: 'With cost in mind, the client wanted a simple yet effective information website to establish a footprint on the internet for her assisted-living care service, Perris Oases. I decided to go with a one-page website and add a fixed navigation bar on top of the page. I provided the pertinent copy, a service comparison chart, a Google map and a contact form. I also included a call-to-action pop-up for new visitors to instruct them to call the client’s number with any questions.', preview: "wp9", tech: ["wordpress", "html", "css", "js", "jquery"]
 	},
 	{
 		
@@ -34,9 +41,6 @@ var projects=[ {
 	} ,
 	{
 		name: "Public API Gallery*", url: "https://webdesignertroy.github.io/techdegree/proj10", github: "https://github.com/webdesignertroy/Techdegree-Project-10", mockup:"", description: 'I personally found <a href="https://teamtreehouse.com/techdegree" target="_blank">Treehouse\'s Techdegree Program\'s</a> 10th project the most rewarding and useful. Students generated a public API call from at least two sources using only JavaScript, jQuery, HTML and CSS.  Building functional, interactive sites that visitors could actually use was why I started the Program.  This app called on iTunes\' and YouTube\'s APIs to generate a movie and show search library. Results from the API mismatch generates great fun.', preview: "proj10", tech: ["html", "css", "js", "jquery", "github"]
-	}, 
-	{
-		name: "Company Site", url: "http://sterlingpacificmeat.com/", github: "", mockup:"", description: 'The client wanted us to update his very old static company site. We decided to do an entire revamp of the site creating a responsive, dynamic and clean look.  We worked with WordPress\'s CMS so the client achieved the new ability to update the site himself.  We also added a custom <em>agriculture futures</em> page fueled with data from Yahoo! Finance.', preview: "wp4", tech: ["wordpress", "html", "css", "js", "jquery"] 
 	},
 	{
 		name: "General Contractor Site", url: "https://2mgconstruction.com/", github: "", mockup:"", description: 'I refactored 2MGconstruction to keep up with mobile requests. The old site was outdated, so I started from scratch. I kept the traditional menu, but augmented it with a pull-down version for mobile devices. I replaced slideshows with image grids to give the visitor upfront choices all at once. I added a review section where <em>happy</em> clients could comment on the work completed by 2MGconstruction.', preview: "wp1", tech: ["wordpress", "html", "css", "js", "jquery"] 
@@ -274,17 +278,19 @@ $(document).ready(function(){
 			$projectTech.addClass("transparent");
 			$(".layout-details").addClass("transparent");
 			if ( animateDir === "back") {
-				$projectImage.addClass("transparent-image").delay(500).queue(function(next){
+				$projectImage.removeClass("transparent-image-forward-after").removeClass("transparent-image-backwards-after").addClass("transparent-image-backwards").delay(700).queue(function(next){
 					findData(direct);
-					$projectImage.removeClass("transparent-image");
+					$projectImage.removeClass("transparent-image-backwards");
+					$projectImage.addClass("transparent-image-backwards-after");
 					$projectTech.removeClass("transparent");
 					$(".layout-details").removeClass("transparent");
 					next();
 				});
 			} else {
-				$projectImage.addClass("transparent-image2").delay(500).queue(function(next){
+				$projectImage.removeClass("transparent-image-backwards-after").removeClass("transparent-image-forward-after").addClass("transparent-image-forward").delay(700).queue(function(next){
 					findData(direct);
-					$projectImage.removeClass("transparent-image2");
+					$projectImage.removeClass("transparent-image-forward");
+					$projectImage.addClass("transparent-image-forward-after");
 					$projectTech.removeClass("transparent");
 					$(".layout-details").removeClass("transparent");
 					next();

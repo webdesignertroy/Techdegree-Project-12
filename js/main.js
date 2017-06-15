@@ -68,17 +68,19 @@ $(document).ready(function(){
 			$projectTech.addClass("transparent");
 			$(".layout-details").addClass("transparent");
 			if ( animateDir === "back") {
-				$projectImage.addClass("transparent-image").delay(500).queue(function(next){
+				$projectImage.removeClass("transparent-image-forward-after").removeClass("transparent-image-backwards-after").addClass("transparent-image-backwards").delay(700).queue(function(next){
 					findData(direct);
-					$projectImage.removeClass("transparent-image");
+					$projectImage.removeClass("transparent-image-backwards");
+					$projectImage.addClass("transparent-image-backwards-after");
 					$projectTech.removeClass("transparent");
 					$(".layout-details").removeClass("transparent");
 					next();
 				});
 			} else {
-				$projectImage.addClass("transparent-image2").delay(500).queue(function(next){
+				$projectImage.removeClass("transparent-image-backwards-after").removeClass("transparent-image-forward-after").addClass("transparent-image-forward").delay(700).queue(function(next){
 					findData(direct);
-					$projectImage.removeClass("transparent-image2");
+					$projectImage.removeClass("transparent-image-forward");
+					$projectImage.addClass("transparent-image-forward-after");
 					$projectTech.removeClass("transparent");
 					$(".layout-details").removeClass("transparent");
 					next();
