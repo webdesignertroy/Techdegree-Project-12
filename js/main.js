@@ -400,6 +400,8 @@ $(document).ready(function(){
 			$arrowRight.remove();
 			$arrowLeft.remove();
 			$mobileEscape.remove();
+			$projectImage.removeClass("transparent-image-backwards-after");
+			$projectImage.removeClass("transparent-image-forward-after");
 		});
 
 	});  //end Close overlay on click
