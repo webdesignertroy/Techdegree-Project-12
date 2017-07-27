@@ -9,14 +9,18 @@ var projects=[ {
 	},
 	{
 		
+		name: "Small-Business Site", url: "http://cleanandclearpools.com/", github: "", mockup:"", description: 'Per request a marketing firm, I refactored a small-business WordPress website. I introduced a panoramic blue, underwater feel to demonstrate cleanliness and clarity of \'pool-service expertise.\'  I added responsive behavior for mobile device visitors.  I also streamlined the \'copy\' to look and feel more modern. I added a Google map showing multiple service areas and created a custom MailChimp newsletter sign-up form', preview: "wp10", tech: ["wordpress", "html", "css", "js", "jquery"]
+	},
+	{
+		
 		name: "One-Page Site", url: "https://perrisoases.com/", github: "", mockup:"", description: 'With cost in mind, the client wanted a simple yet effective information website to establish a footprint on the internet for her assisted-living care service, Perris Oases. I decided to go with a one-page website and add a fixed navigation bar on top of the page. I provided the pertinent copy, a service comparison chart, a Google map and a contact form. I also included a call-to-action pop-up for new visitors to instruct them to call the client’s number with any questions.', preview: "wp9", tech: ["wordpress", "html", "css", "js", "jquery"]
 	},
 	{
 		
-		name: "Restaurant Site (Sample)", url: "https://sample1.troyrowtham.com/", github: "", mockup:"", description: 'In designing this popular restaurant\'s site, via a marketing firm, the biggest request by the client was to create an online menu with separate prices for lunch, non-event dinners and live-event dinners.  I created a toggle that shifted between different versions of the menu at a press of a button. I also installed an event manager on the backend so the client could present nighttime live events on the front-end with ease.', preview: "wp5", tech: ["wordpress", "html", "css", "js", "jquery"]
+		name: "Restaurant Site (Sample)", url: "https://sample1.troyrowtham.com/", github: "", mockup:"", description: 'In designing this popular restaurant\'s site, via a marketing agency, the biggest request by the client was to create an online menu with separate prices for lunch, non-event dinners and live-event dinners.  I created a toggle that shifted between different versions of the menu at a press of a button. I also installed an event manager on the backend so the client could present nighttime live events on the front-end with ease.', preview: "wp5", tech: ["wordpress", "html", "css", "js", "jquery"]
 	},
 	{
-		name: "Business Site (Sample)", url: "https://sample2.troyrowtham.com/", github: "", mockup:"", description: 'Per request a marketing firm, I created an insurance company\'s website.  I used large, bold imagery and animated tools to help push a message of professionalism and experience. This site is filled with call-to-action cues that propel a visitor to ask for more information ("a quote") at the end of the visit.', preview: "wp6", tech: ["wordpress", "html", "css", "js", "jquery"]
+		name: "Business Site (Sample)", url: "https://sample2.troyrowtham.com/", github: "", mockup:"", description: 'Per request a marketing agency, I created an insurance company\'s website.  I used large, bold imagery and animated tools to help push a message of professionalism and experience. This site is filled with call-to-action cues that propel a visitor to ask for more information ("a quote") at the end of the visit.', preview: "wp6", tech: ["wordpress", "html", "css", "js", "jquery"]
 	},
 	{
 		name: "Landing Page (Sample)", url: "https://sample3.troyrowtham.com/", github: "", mockup:"http://troyrowtham.com/pdfs/proj-wp7.pdf", description: 'This is a sample of a landing page created per mockup visual for a local college. This WordPress Site is light, customized and image optimized. It loads approximately 90% faster than all tested websites on Pingdom. It also scores well with PageSpeed Insights. Supreme for marketers who want to target smartphone users but not break the budget.', preview: "wp7", tech: ["wordpress", "html", "css", "js", "jquery"]
