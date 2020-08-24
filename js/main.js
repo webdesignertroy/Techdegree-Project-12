@@ -16,9 +16,9 @@ $(document).ready(function(){
 	var menuLength = 0;
 
 	var $overlay = $("#overlay");
-	var $projectImage = $('<div id="project-image"></div>');
-	var $projectDetails = $('<div id="project-details"></div>');
-	var $projectTech = $('<div id="project-tech"></div>'); 
+	var $projectImage = $('<div class="project-image"></div>');
+	var $projectDetails = $('<div class="project-details"></div>');
+	var $projectTech = $('<div class="project-tech"></div>'); 
 	var $cursorBorderLeft = $('<div id="cursor-border-left"></div>');
 	var $cursorBorderRight = $('<div id="cursor-border-right"></div>');
 	var $arrowLeft = $('<div id="arrow-left"></div>');
@@ -28,6 +28,8 @@ $(document).ready(function(){
 	var inView = false;
 	
 	var preLoadTime = 0;
+	
+	var $sectionType = "";
 
 	/************************
 		FUNCTION EXPRESSIONS
@@ -69,7 +71,7 @@ $(document).ready(function(){
 			$(".layout-details").addClass("transparent");
 			if ( animateDir === "back") {
 				$projectImage.removeClass("transparent-image-forward-after").removeClass("transparent-image-backwards-after").addClass("transparent-image-backwards").delay(700).queue(function(next){
-					findData(direct);
+					findData(direct, $sectionType);
 					$projectImage.removeClass("transparent-image-backwards");
 					$projectImage.addClass("transparent-image-backwards-after");
 					$projectTech.removeClass("transparent");
@@ -78,7 +80,7 @@ $(document).ready(function(){
 				});
 			} else {
 				$projectImage.removeClass("transparent-image-backwards-after").removeClass("transparent-image-forward-after").addClass("transparent-image-forward").delay(700).queue(function(next){
-					findData(direct);
+					findData(direct, $sectionType);
 					$projectImage.removeClass("transparent-image-forward");
 					$projectImage.addClass("transparent-image-forward-after");
 					$projectTech.removeClass("transparent");
@@ -102,46 +104,90 @@ $(document).ready(function(){
 		}; 	// end Listen for when element scrolls into view
 		
 	// Function: Find correct data in project details array
-		var findData = function(index) {
+		var findData = function(index, identity) {
 			var imageHTML = "";
 			var detailHTML = "";
-			var skillsHTML = "";
-			$.each(projects, function(i, data){
-				if (index  === i) {
-					// build image div
-					imageHTML += '<div class="image-details" data-image-index="'+ i +'">';
-					imageHTML += '<img src="img/projects/' + data.preview + '.jpg"/>';
-					imageHTML += '</div>';
+				var skillsHTML = "";
+				if ( identity === "projects" ) {
+						$.each(projects, function(i, data){ 
+					if (index  === i) {
+						// build image div
+						imageHTML += '<div class="image-details" data-image-index="'+ i +'">';
+						imageHTML += '<img src="img/projects/' + data.preview + '.jpg"/>';
+						imageHTML += '</div>';
 
-					// build description div
-					detailHTML += '<div class="layout-details">';
-					detailHTML += '<h3>' + data.name +'</h3>';
-					detailHTML +=  '<p class="btn-container">';
-					detailHTML += '<a href="' + data.url + '" class="btn" target="_blank">Visit Site</a>';
-					if ( data.github !== "" ) {
-						detailHTML += '<a href="' + data.github + '" class="btn" target="_blank"> Visit GitHub</a>';
-					}
-					if ( data.mockup !== "" ) {
-						detailHTML += '<a id ="show-mock" href="' + data.mockup + '" class="btn" target="_blank"> See Mockup</a>';
-					}
-					detailHTML += '</p>';
-					detailHTML += '<p>' + data.description + '</p>';
-					detailHTML +='</div>';
+						// build description div
+						detailHTML += '<div class="layout-details">';
+						detailHTML += '<h3>' + data.name +'</h3>';
+						detailHTML +=  '<p class="btn-container">';
+						if ( data.url !== "" ) {
+							detailHTML += '<a href="' + data.url + '" class="btn" target="_blank">Visit Site</a>';
+						}
+						if ( data.github !== "" ) {
+							detailHTML += '<a href="' + data.github + '" class="btn" target="_blank"> Visit GitHub</a>';
+						}
+						if ( data.mockup !== "" ) {
+							detailHTML += '<a id ="show-mock" href="' + data.mockup + '" class="btn" target="_blank"> See Mockup</a>';
+						}
+						detailHTML += '</p>';
+						detailHTML += '<p>' + data.description + '</p>';
+						detailHTML +='</div>';
 
-					// build skills badges div
-					skillsHTML += '<div class="layout-skills">';
-					for ( i = 0; i < data.tech.length; i++ ) {
-						skillsHTML += '<div class="badge-container"><div id="' + data.tech[i] + '" class="badge">';
-						skillsHTML += data.tech[i];
-						skillsHTML += '</div><span>' + data.tech[i] + '</span></div>';
+						// build skills badges div
+						skillsHTML += '<div class="layout-skills">';
+						for ( i = 0; i < data.tech.length; i++ ) {
+							skillsHTML += '<div class="badge-container"><div id="' + data.tech[i] + '" class="badge">';
+							skillsHTML += data.tech[i];
+							skillsHTML += '</div><span>' + data.tech[i] + '</span></div>';
+						}
+						skillsHTML += '</div>';
 					}
-					skillsHTML += '</div>';
-				}
-				document.getElementById("project-tech").innerHTML = skillsHTML;
-				document.getElementById("project-image").innerHTML = imageHTML;
-				document.getElementById("project-details").innerHTML = detailHTML;
+					document.querySelector(".project-tech").innerHTML = skillsHTML;
+					document.querySelector(".project-image").innerHTML = imageHTML;
+					document.querySelector(".project-details").innerHTML = detailHTML;
 
-			}); // end HTML builds
+				}); // end HTML builds
+					} else {
+						$.each(sketches, function(i, data){ 
+					if (index  === i) {
+						// build image div
+						imageHTML += '<div class="image-details" data-image-index="'+ i +'">';
+						imageHTML += '<img src="img/projects/' + data.preview + '.jpg"/>';
+						imageHTML += '</div>';
+
+						// build description div
+						detailHTML += '<div class="layout-details">';
+						detailHTML += '<h3>' + data.name +'</h3>';
+						detailHTML +=  '<p class="btn-container">';
+						if ( data.url !== "" ) {
+							detailHTML += '<a href="' + data.url + '" class="btn" target="_blank">Visit Site</a>';
+						}
+						if ( data.github !== "" ) {
+							detailHTML += '<a href="' + data.github + '" class="btn" target="_blank"> Visit GitHub</a>';
+						}
+						if ( data.mockup !== "" ) {
+							detailHTML += '<a id ="show-mock" href="' + data.mockup + '" class="btn" target="_blank"> See Mockup</a>';
+						}
+						detailHTML += '</p>';
+						detailHTML += '<p>' + data.description + '</p>';
+						detailHTML +='</div>';
+
+						// build skills badges div
+						skillsHTML += '<div class="layout-skills">';
+						for ( i = 0; i < data.tech.length; i++ ) {
+							skillsHTML += '<div class="badge-container"><div id="' + data.tech[i] + '" class="badge">';
+							skillsHTML += data.tech[i];
+							skillsHTML += '</div><span>' + data.tech[i] + '</span></div>';
+						}
+						skillsHTML += '</div>';
+					}
+					document.querySelector(".project-tech").innerHTML = skillsHTML;
+					document.querySelector(".project-image").innerHTML = imageHTML;
+					document.querySelector(".project-details").innerHTML = detailHTML;
+
+				}); // end HTML builds
+					}
+				
 		};  // end find data function 
 		
 	/************************
@@ -288,8 +334,8 @@ $(document).ready(function(){
     }  
 	// Load after logo animation has run more than 75%
 	
-	// On left-hemisphere hover in header / Develop-side
-	$("#left-trigger").mouseenter(function(){
+	// 
+	/*$("#left-trigger").mouseenter(function(){
 		if(preLoadTime !== 1) { return;}
 		$("#develop-bg").removeClass("reveal-left");
 		$("#header").addClass("red");
@@ -314,7 +360,7 @@ $(document).ready(function(){
 		$("#create-bg").addClass("reveal-right");
 		$("#header").removeClass("blue");
 		$("#create-mobile-svg").removeClass("fade-out");
-	});
+	});*/
 		
  	/*******************************
 	   FOR PORTFOLIO INTERACTIVE
@@ -339,6 +385,7 @@ $(document).ready(function(){
 
 		// Variables
 		var $projectIndex = parseInt($(this).attr("data-index")); 
+		$sectionType = "projects";
 
 		// Append overlay/wrapper and show
 		$projectImage.appendTo($overlay);
@@ -352,7 +399,8 @@ $(document).ready(function(){
 		$mobileEscape.appendTo($wrapper);
 
 		// Invoke findData() to Find Correct Data
-		findData($projectIndex);
+		$whatdata = "projects";
+		findData($projectIndex, $whatdata);
 
 		// Fade-in overlay
 		$overlay.animate({
@@ -371,8 +419,75 @@ $(document).ready(function(){
 
 	});  // end Open overlay on click
 
+	
+	
+	
+	/*******************************
+	   FOR SKETCHES INTERACTIVE
+	*******************************/
+
+	// Create "for loop" with HTML code mixed with variables 
+	function renderSketchDetails() {
+		for ( var t="",  i=0; i < sketches.length; i++ ) {
+			t+='<div class="port-col" data-index="' + i + '">';
+			t+="<h3>"+sketches[i].name+"</h3>";
+			t+='<div class="project-preview"><img src="img/projects/thumbs/'+sketches[i].preview+'.png" alt=""><span></span></div>';
+			t+="</div>";
+		}
+		$(".sketch-details-dom").html(t);
+	}
+
+	// Invoke function
+	renderSketchDetails();
+
+	// Open overlay on click
+	$(".sketch-details-dom").on("click", ".port-col", function(){
+
+		// Variables
+		var $projectIndex = parseInt($(this).attr("data-index")); 
+		$sectionType = "sketches";
+
+		// Append overlay/wrapper and show
+		$projectImage.appendTo($overlay);
+		$overlay.addClass("show");
+		$projectDetails.appendTo($wrapper);
+		$projectTech.appendTo($wrapper);
+		$cursorBorderLeft.appendTo($wrapper);
+		$cursorBorderRight.appendTo($wrapper);
+		$arrowRight.appendTo($wrapper);
+		$arrowLeft.appendTo($wrapper);
+		$mobileEscape.appendTo($wrapper);
+
+		// Invoke findData() to Find Correct Data
+		$whatdata = "sketches";
+		findData($projectIndex, $whatdata);
+
+		// Fade-in overlay
+		$overlay.animate({
+			opacity: 1
+		}, 500);
+
+		// Fade-in project-details
+		$projectDetails.animate({
+			opacity: 1
+		},500);
+
+		// Fade-in project-skills
+		$projectTech.animate({
+			opacity: 1
+		},500);
+
+	});  // end Open overlay on click
+	
+	
+	
+	
 	// Close overlay and project details on click
 	$overlay.on("click", function(){
+		
+		// Variables
+		
+		$sectionType = "";
 
 		// Fade-out project details
 		$projectDetails.animate({
@@ -417,27 +532,48 @@ $(document).ready(function(){
 	$wrapper.on("click", "#arrow-right", function(){
 		var detailsIndex = parseInt($(".image-details").attr("data-image-index"));
 		var animateLeft = "fwd";
-		if ( detailsIndex < projects.length - 1 ) {
-			var directions = detailsIndex + 1;
-			newView(directions, animateLeft);
-			
-		} else {
-			var directions = 0;
-			newView(directions, animateLeft);
-		}
+			if ( $sectionType === "projects") {
+				if ( detailsIndex < projects.length - 1 ) {
+					var directions = detailsIndex + 1;
+					newView(directions, animateLeft);
+
+				} else {
+					var directions = 0;
+					newView(directions, animateLeft);
+				}
+			} else {
+				if ( detailsIndex < sketches.length - 1 ) {
+					var directions = detailsIndex + 1;
+					newView(directions, animateLeft);
+
+				} else {
+					var directions = 0;
+					newView(directions, animateLeft);
+				}
+			}
 	}); // end right-arrow click event
 
 	// On left arrow click event (bubbling event issues)
 	$wrapper.on("click", "#arrow-left", function(){
 		var detailsIndex = parseInt($(".image-details").attr("data-image-index"));
 		var animateRight = "back";
-		if ( detailsIndex > 0 ) {
-			var directions = detailsIndex - 1;
-			newView(directions, animateRight);
-		} else {
-			var directions = projects.length - 1;
-			newView(directions, animateRight);
-		}
+			if ( $sectionType === "projects") {
+					if ( detailsIndex > 0 ) {
+						var directions = detailsIndex - 1;
+						newView(directions, animateRight);
+					} else {
+						var directions = projects.length - 1;
+						newView(directions, animateRight);
+					}
+			} else {
+					if ( detailsIndex > 0 ) {
+						var directions = detailsIndex - 1;
+						newView(directions, animateRight);
+					} else {
+						var directions = sketches.length - 1;
+						newView(directions, animateRight);
+					}
+			}
 	}); // end left-arrow click event
 
 	/*  Accessibility: Keyboard  */

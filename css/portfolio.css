@@ -71,6 +71,7 @@
 }
 
 /*  Thumbs  */
+#sketches,
 #projects {
 	width: 100%;
 	margin-top: 30px;
@@ -91,15 +92,18 @@
 .project-preview:hover span {
 	transform: rotate(-90deg);
 }
+#sketches h3,
 #projects h3 {
 	text-align: center;
 	text-transform: uppercase;
 	font-size: 0.85rem;
 	position: relative;
 }
+#sketches p,
 #projects p {
 	text-align: left;
 }
+.sketch-details-dom,
 .project-details-dom {
 	max-width: 960px;
 	margin: 20px auto;
@@ -173,7 +177,7 @@
 	max-width: 1050px;
 	margin: 0 auto;
 }
-#project-image {
+.project-image {
 	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
@@ -182,7 +186,7 @@
 	margin-top: -176px;
 	transition: .3s ease-out;
 }
-#project-details {
+.project-details {
 	position: fixed;
 	bottom: 0;
 	left: 0;
@@ -254,7 +258,7 @@
 }
 
 /*  SVG Map  */
-#project-tech {
+.project-tech {
 	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;

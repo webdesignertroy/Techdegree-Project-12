@@ -73,7 +73,7 @@ Portfolio was checked on the following browsers:
       </svg>
     </div>
     <div id="develop-bg" class="interactive-bg reveal-left"> <img alt="develop" src="img/header/development.svg" /> </div>
-    <div id="create-bg" class="interactive-bg reveal-right"> <img  alt="create" src="img/header/design.svg" /></div>
+    <div id="create-bg" class="interactive-bg reveal-right"> <img  alt="create" src="img/header/design3.svg" /></div>
     <div id="create-mobile-bg" > <img id="create-mobile-svg" alt="develop" src="img/header/create.svg" /> </div>
   </div>
   <!-- header ends -->
@@ -83,6 +83,7 @@ Portfolio was checked on the following browsers:
       <ul id="main">
         <li><a href="#header">Home</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#sketches">Sketch Art</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#certified">Certified</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -98,9 +99,19 @@ Portfolio was checked on the following browsers:
       <div class="statement"> In this section, I provide descriptions and <strong><em>links</em></strong> to my most current projects. Each project, represented by a thumb image below, demonstrates a different step in my continuous journey to understand the intricate play between web design and front-end web development.</div>
       <div class="project-details-dom"> </div>
       <div class="statement">
-      	<ul class="note">
+      	<!--<ul class="note">
       		<li>Please note that none of the <em>challenge</em> projects rely on third-party plugins. They are custom creations designed from scratch (to align closely with their mockups when available) and built within two weeks.</li>
-      	</ul>
+      	</ul>-->
+      </div>
+    </div>
+    <div id="sketches" class="col">
+      <h2 > Sketch Art </h2>
+      <div class="statement"> Drawing has been a passion of mine since childhood.  This skill set also heightens my sense of detail when it comes web development.  The sketch art below range among some of my favorites over the years. </div>
+      <div class="sketch-details-dom"> </div>
+      <div class="statement">
+      	<!--<ul class="note">
+      		<li>Please note that none of the <em>challenge</em> projects rely on third-party plugins. They are custom creations designed from scratch (to align closely with their mockups when available) and built within two weeks.</li>
+      	</ul>-->
       </div>
     </div>
     <div class="seperator"></div>
@@ -241,7 +252,7 @@ Portfolio was checked on the following browsers:
 //Preload Images
 function preloader() {
 
-    var imageFolder = ['header/development.svg', 'header/create.svg', 'header/design.svg','projects/thumbs/proj3.png','projects/thumbs/proj4.png','projects/thumbs/proj5.png','projects/thumbs/proj7.png','projects/thumbs/proj9.png','projects/thumbs/proj10.png','projects/thumbs/wp1.png','projects/thumbs/wp2.png','projects/thumbs/wp3.png','projects/thumbs/wp4.png','projects/thumbs/wp5.png','projects/thumbs/wp6.png','projects/thumbs/wp7.png','projects/thumbs/wp8.png','projects/thumbs/wp9.png','projects/thumbs/wp10.png','projects/proj3.jpg','projects/proj4.jpg','projects/proj5.jpg','projects/proj7.jpg','projects/proj9.jpg','projects/proj10.jpg','projects/wp1.jpg','projects/wp2.jpg','projects/wp3.jpg','projects/wp4.jpg','projects/wp5.jpg','projects/wp6.jpg','projects/wp7.jpg','projects/wp8.jpg','projects/wp9.jpg','projects/wp10.jpg']; //manually add  images
+    var imageFolder = ['header/development.svg', 'header/create.svg', 'header/design.svg','projects/thumbs/proj3.png','projects/thumbs/proj4.png','projects/thumbs/proj5.png','projects/thumbs/proj7.png','projects/thumbs/proj9.png','projects/thumbs/proj10.png','projects/thumbs/wp1.png','projects/thumbs/wp2.png','projects/thumbs/wp3.png','projects/thumbs/wp4.png','projects/thumbs/wp5.png','projects/thumbs/wp6.png','projects/thumbs/wp7.png','projects/thumbs/wp8.png','projects/thumbs/wp9.png','projects/thumbs/wp10.png','projects/thumbs/wp11.png','projects/thumbs/wp12.png','projects/thumbs/wp13.png','projects/thumbs/wp14.png','projects/thumbs/wp15.png','projects/thumbs/wp16.png','projects/thumbs/wp19.png','projects/thumbs/wp20.png','projects/thumbs/wp21.png','projects/thumbs/wp22.png','projects/proj3.jpg','projects/proj4.jpg','projects/proj5.jpg','projects/proj7.jpg','projects/proj9.jpg','projects/proj10.jpg','projects/wp1.jpg','projects/wp2.jpg','projects/wp3.jpg','projects/wp4.jpg','projects/wp5.jpg','projects/wp6.jpg','projects/wp7.jpg','projects/wp8.jpg','projects/wp9.jpg','projects/wp10.jpg','projects/wp11.jpg','projects/wp12.jpg','projects/wp13.jpg','projects/wp14.jpg','projects/wp15.jpg','projects/wp16.jpg','projects/wp19.jpg','projects/wp20.jpg','projects/wp21.jpg','projects/wp22.jpg']; //manually add  images
     for( var i = 0; i < imageFolder.length; i++){                   
         var img  = new Image();
         img.src = "img/" + imageFolder[i];        
